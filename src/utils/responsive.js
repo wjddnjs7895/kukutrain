@@ -3,10 +3,10 @@ import { isMobile } from 'react-device-detect';
 
 export const REAL__WIDTH = window.innerWidth;
 export const REAL__HEIGHT = screen.availHeight - (window.outerHeight - window.innerHeight);
-export const FIGMA__WINDOW__WIDTH = 405;
-export const FIGMA__WINDOW__HEIGHT = 720;
-export const FIGMA__FRAME__WIDTH = 1280;
-export const FIGMA__FRAME__HEIGHT = 720;
+export const FIGMA__WINDOW__WIDTH = 428;
+export const FIGMA__WINDOW__HEIGHT = 926;
+export const FIGMA__FRAME__WIDTH = 1400;
+export const FIGMA__FRAME__HEIGHT = 926;
 export const HEIGHT = REAL__HEIGHT;
 export const WIDTH = isMobile ? REAL__WIDTH : getWidthForDesktop();
 
