@@ -9,6 +9,7 @@ function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

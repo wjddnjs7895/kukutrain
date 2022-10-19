@@ -48,3 +48,8 @@ export const getHeightPixelByWidth = (width, height) => {
   const result = Math.round((height / width) * (width / FIGMA__WINDOW__WIDTH) * WIDTH);
   return `${result.toString()}px`;
 };
+
+export function getPixelToNumber(size) {
+  size.replace('px', '');
+  return parseInt(size);
+}

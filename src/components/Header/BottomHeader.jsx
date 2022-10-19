@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { getHeightPixel } from '../../utils/responsive';
+import { getPixelToNumber, getHeightPixel, HEIGHT } from '../../utils/responsive';
 
-export function BottomHeader({ setLocY }) {
+export function BottomHeader({ locY, setLocY }) {
   const [isScroll, setScroll] = useState(false);
   return (
     <ContainerStyled
@@ -14,7 +14,7 @@ export function BottomHeader({ setLocY }) {
       }}
       onTouchMove={e => {
         if (isScroll) {
-          setLocY(e.touches[0].clientY);
+          setLocY(e.touches[0].pageY);
         }
       }}
       onMouseDown={() => {
@@ -29,7 +29,7 @@ export function BottomHeader({ setLocY }) {
         }
       }}
     >
-      Header
+      {locY},{HEIGHT}
     </ContainerStyled>
   );
 }
