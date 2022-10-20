@@ -1,0 +1,16 @@
+export const palette = {
+  red: '#FF0000',
+  orange: '#FFA500',
+  yellow: '#FFFF00',
+  green: '#008000',
+  blue: '#0000FF',
+  indigo: '#4B0082',
+  violet: '#EE82EE',
+  white: '#FFFFFF',
+  black: '#000000',
+  pink: '#DF8383',
+  gray: '#BABABA',
+  crimson: '#BC323B',
+  background: '#F6F6F6',
+  none: '#ffffff00',
+};

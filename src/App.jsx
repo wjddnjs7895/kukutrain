@@ -41,7 +41,6 @@ const PageStyled = styled.div`
 const ContainerStyled = styled.div`
   width: ${`${WIDTH.toString()}px`};
   height: ${`${HEIGHT.toString()}px`};
-  border: 1px solid;
 `;
 
 export default App;
