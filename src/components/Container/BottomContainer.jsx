@@ -8,7 +8,7 @@ import BodyContainer from './BodyContainer';
 export default function BottomContainer({ locY, setLocY }) {
   return (
     <ContainerStyled marginTop={locY < 796 ? (locY > 0 ? locY + 'px' : getHeightPixel(0)) : getHeightPixel(796)}>
-      <BottomHeader setLocY={setLocY} locY={locY} headerType={0} />
+      <BottomHeader setLocY={setLocY} locY={locY} />
       <BodyContainer />
     </ContainerStyled>
   );

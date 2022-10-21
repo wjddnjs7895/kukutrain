@@ -8,13 +8,32 @@ import Blank from '../Blank';
 
 export default function Button({ idx, text, isSelected, onClick, children }) {
   return (
-    <ButtonStyled buttonColor={isSelected ? palette.crimson : palette.gray} onClick={onClick}>
-      {children}
-      <Blank width={getWidthPixel(10)} />
-      {text}
-    </ButtonStyled>
+    <ContainerStyled>
+      <BarStyled buttonColor={isSelected ? palette.crimson : palette.background} />
+      <ButtonStyled buttonColor={isSelected ? palette.crimson : palette.gray} onClick={onClick}>
+        {children}
+        <Blank width={getWidthPixel(10)} />
+        {text}
+      </ButtonStyled>
+    </ContainerStyled>
   );
 }
+
+const ContainerStyled = styled.div`
+  height: ${getHeightPixel(65)};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const BarStyled = styled.div`
+  border-radius: 2;
+  ${({ buttonColor = palette.gray }) => css`
+    border: 1px solid ${buttonColor};
+  `}
+  width: ${getWidthPixel(42)};
+`;
 
 const ButtonStyled = styled.button`
   width: ${getWidthPixel(108)};
