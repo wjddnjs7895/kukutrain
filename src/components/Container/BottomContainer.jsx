@@ -15,6 +15,7 @@ export default function BottomContainer({ locY, setLocY }) {
 }
 
 const ContainerStyled = styled.div`
+  position: absolute;
   ${({ marginTop = getHeightPixel(796) }) => css`
     margin-top: ${marginTop};
   `};
