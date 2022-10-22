@@ -23,7 +23,6 @@ const ContainerStyled = styled.div`
   height: ${getHeightPixel(65)};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 `;
 
@@ -33,6 +32,7 @@ const BarStyled = styled.div`
     border: 1px solid ${buttonColor};
   `}
   width: ${getWidthPixel(42)};
+  margin-bottom: ${getHeightPixel(21)};
 `;
 
 const ButtonStyled = styled.button`

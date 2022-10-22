@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { getWidthPixel, getHeightPixel, HEIGHT, getPixelToNumber } from '../../utils/responsive';
 
 import { ReactComponent as BottomHeaderElement } from '../../Assets/element/BottomTabElement.svg';
@@ -31,9 +31,9 @@ export function BottomHeader({ locY, setLocY, setSelected, selected }) {
   useEffect(() => {
     let timeoutId;
     if (isToggle) {
-      setFlag(true);
+      timeoutId = setTimeout(() => setFlag(true), 500);
     } else {
-      timeoutId = setTimeout(() => setFlag(false), 150);
+      timeoutId = setTimeout(() => setFlag(false), 500);
     }
     return () => {
       if (timeoutId !== undefined) {
@@ -71,30 +71,7 @@ export function BottomHeader({ locY, setLocY, setSelected, selected }) {
           <BackHeader setSelected={setSelected} />
         </div>
       ) : selectedIdx === 1 ? (
-        <div
-          onTouchStart={e => {
-            setScroll(true);
-          }}
-          onTouchEnd={e => {
-            setScroll(false);
-          }}
-          onTouchMove={e => {
-            if (isScroll) {
-              setLocY(e.touches[0].pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
-            }
-          }}
-          onMouseDown={() => {
-            setScroll(true);
-          }}
-          onMouseUp={() => {
-            setScroll(false);
-          }}
-          onMouseMove={e => {
-            if (isScroll) {
-              setLocY(e.pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
-            }
-          }}
-        >
+        <div>
           {flag ? (
             <BottomSubContainer
               type={type}
@@ -108,38 +85,63 @@ export function BottomHeader({ locY, setLocY, setSelected, selected }) {
               <BottomSubOff />
             </BottomSubOffContainer>
           )}
-          <HeaderBox>
-            <StyledHeaderElement />
-          </HeaderBox>
-          <RowContainerStyled>
-            <MarginStyled>
-              <Button text={'화장실'} idx={0} isSelected={selectedIdx === 0} onClick={() => setIdx(0)}>
-                {selectedIdx === 0 ? <ToiletCrimsonIconStyled /> : <ToiletGrayIconStyled />}
-              </Button>
-            </MarginStyled>
-            <MarginStyled marginLeft={getWidthPixel(152)}>
-              <Button text={'응원단'} idx={2} isSelected={selectedIdx === 2} onClick={() => setIdx(2)}>
-                {selectedIdx === 2 ? <CheerCrimsonIconStyled /> : <CheerGrayIconStyled />}
-              </Button>
-            </MarginStyled>
-          </RowContainerStyled>
-          <CenterButtonStyled onClick={() => setToggle(!isToggle)}>
-            {isToggle ? (
-              <CenterButtonIconStyled>
-                <SpoonIconStyled />
-                <ChopStickLeftIconStyled />
-                <ChopStickRightIconStyled />
-              </CenterButtonIconStyled>
-            ) : (
-              <ListButtonIconStyled>
-                <ListLineStyled />
-                <Blank height={getWidthPixel(6)} />
-                <ListLineStyled />
-                <Blank height={getWidthPixel(6)} />
-                <ListLineStyled />
-              </ListButtonIconStyled>
-            )}
-          </CenterButtonStyled>
+          <div
+            onTouchStart={e => {
+              setScroll(true);
+            }}
+            onTouchEnd={e => {
+              setScroll(false);
+            }}
+            onTouchMove={e => {
+              if (isScroll) {
+                setLocY(e.touches[0].pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
+              }
+            }}
+            onMouseDown={() => {
+              setScroll(true);
+            }}
+            onMouseUp={() => {
+              setScroll(false);
+            }}
+            onMouseMove={e => {
+              if (isScroll) {
+                setLocY(e.pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
+              }
+            }}
+          >
+            <HeaderBox>
+              <StyledHeaderElement />
+            </HeaderBox>
+            <RowContainerStyled>
+              <MarginStyled>
+                <Button text={'화장실'} idx={0} isSelected={selectedIdx === 0} onClick={() => setIdx(0)}>
+                  {selectedIdx === 0 ? <ToiletCrimsonIconStyled /> : <ToiletGrayIconStyled />}
+                </Button>
+              </MarginStyled>
+              <MarginStyled marginLeft={getWidthPixel(152)}>
+                <Button text={'응원단'} idx={2} isSelected={selectedIdx === 2} onClick={() => setIdx(2)}>
+                  {selectedIdx === 2 ? <CheerCrimsonIconStyled /> : <CheerGrayIconStyled />}
+                </Button>
+              </MarginStyled>
+            </RowContainerStyled>
+            <CenterButtonStyled onClick={() => setToggle(!isToggle)}>
+              {flag ? (
+                <CenterButtonIconStyled isVisible={isToggle}>
+                  <SpoonIconStyled isVisible={isToggle} />
+                  <ChopStickLeftIconStyled isVisible={isToggle} />
+                  <ChopStickRightIconStyled isVisible={isToggle} />
+                </CenterButtonIconStyled>
+              ) : (
+                <ListButtonIconStyled isVisible={isToggle}>
+                  <ListLineStyledLeft isVisible={isToggle} />
+                  <Blank height={getWidthPixel(6)} />
+                  <ListLineStyledMiddle isVisible={isToggle} />
+                  <Blank height={getWidthPixel(6)} />
+                  <ListLineStyledRight isVisible={isToggle} />
+                </ListButtonIconStyled>
+              )}
+            </CenterButtonStyled>
+          </div>
         </div>
       ) : (
         <HeaderStyled
@@ -253,6 +255,10 @@ const CenterButtonIconStyled = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? null : scaleDown} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
 `;
 
 const ListButtonIconStyled = styled.div`
@@ -266,6 +272,10 @@ const ListButtonIconStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? scaleUp : null} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
 `;
 
 const CenterButtonStyled = styled.button`
@@ -276,24 +286,62 @@ const CenterButtonStyled = styled.button`
   border: 0px;
 `;
 
-const ListLineStyled = styled.div`
+const ListLineStyledLeft = styled.div`
   width: ${getWidthPixel(20)};
   height: ${getWidthPixel(3)};
   border-radius: ${getWidthPixel(2)};
   background-color: white;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? toSpoonLineLeft : fromSpoonLineLeft} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
+`;
+
+const ListLineStyledMiddle = styled.div`
+  width: ${getWidthPixel(20)};
+  height: ${getWidthPixel(3)};
+  border-radius: ${getWidthPixel(2)};
+  background-color: white;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? toSpoonLineMiddle : fromSpoonLineMiddle} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
+`;
+
+const ListLineStyledRight = styled.div`
+  width: ${getWidthPixel(20)};
+  height: ${getWidthPixel(3)};
+  border-radius: ${getWidthPixel(2)};
+  background-color: white;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? toSpoonLineRight : fromSpoonLineRight} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
 `;
 
 const SpoonIconStyled = styled(SpoonIcon)`
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fromListSpoon : toListSpoon} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
   width: ${getWidthPixel(11)};
   height: ${getWidthPixel(34)};
 `;
 
 const ChopStickLeftIconStyled = styled(ChopStickLeftIcon)`
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fromListChopStickLeft : toListChopStickLeft} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
   width: ${getWidthPixel(7)};
   height: ${getWidthPixel(34)};
 `;
 
 const ChopStickRightIconStyled = styled(ChopStickRightIcon)`
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fromListChopStickRight : toListChopStickRight} 0.5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
+  `}
   width: ${getWidthPixel(7)};
   height: ${getWidthPixel(34)};
 `;
@@ -318,4 +366,142 @@ const MarginStyled = styled.div`
     margin-left: ${marginLeft};
     margin-right: ${marginRight};
   `}
+`;
+
+const scaleUp = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+`;
+
+const scaleDown = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+`;
+
+const toListSpoon = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(90deg) translateY(${getWidthPixel(-5)}) scale(0.9);
+  }
+`;
+
+const fromListSpoon = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const toListChopStickLeft = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(-90deg) translateX(${getWidthPixel(-10)}) scale(0.9);
+  }
+`;
+
+const fromListChopStickLeft = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const toListChopStickRight = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translate(${getWidthPixel(0)}, ${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(-90deg) translate(${getWidthPixel(10)}, ${getWidthPixel(-10)}) scale(0.9);
+  }
+`;
+
+const fromListChopStickRight = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const toSpoonLineLeft = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translate(${getWidthPixel(0)}, ${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(90deg) translate(${getWidthPixel(8)},  ${getWidthPixel(-10)}) scale(1.3);
+  }
+`;
+
+const fromSpoonLineLeft = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const toSpoonLineMiddle = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(-90deg) translateY(${getWidthPixel(-5)}) scale(1.3);
+  }
+`;
+
+const fromSpoonLineMiddle = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+}
+`;
+
+const toSpoonLineRight = keyframes`
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(${getWidthPixel(0)}) scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(95deg) translateX(${getWidthPixel(-10)}) scale(1.3);
+  }
+`;
+
+const fromSpoonLineRight = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 `;
