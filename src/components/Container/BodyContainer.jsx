@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import ListPage from '../../pages/ListPage';
 import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 
 import { palette } from '../../constants/palette';
+import Detail from '../Detail/Detail';
 
 export default function BodyContainer({ locY }) {
+  const [selected, setSelected] = useState(-1);
+
   return (
     <ContainerStyled>
-      <DividerStyled />
-      <ListPage />
+      {selected === -1 ? (
+        <>
+          <DividerStyled />
+          <ListPage setSelected={setSelected} />
+        </>
+      ) : (
+        <Detail locY={locY} restaurant_id={selected} />
+      )}
     </ContainerStyled>
   );
 }

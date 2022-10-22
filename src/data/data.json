@@ -1,0 +1,115 @@
+{
+  "markers": [
+    {
+      "id": 0,
+      "type": "restaurant",
+      "name": "춘자",
+      "position": {
+        "lat": 37.5843918209331,
+        "lng": 127.02957798348103
+      }
+    },
+    {
+      "id": 1,
+      "type": "cheer",
+      "name": "응원단",
+      "position": {
+        "lat": 37.58317774961192,
+        "lng": 127.02950957395034
+      }
+    },
+    {
+      "id": 2,
+      "type": "toilet",
+      "name": "정보관 화장실",
+      "position": {
+        "lat": 37.58520749653496,
+        "lng": 127.02845178318773
+      }
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 0,
+      "restaurant_id": 0,
+      "main_image": "main_image",
+      "snack": [
+        {
+          "id": 0,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 1,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 2,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 3,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 4,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 5,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 6,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 7,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 8,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 9,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 10,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 11,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 12,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 13,
+          "name": "돼지불고기",
+          "img": "Image"
+        },
+        {
+          "id": 14,
+          "name": "돼지불고기",
+          "img": "Image"
+        }
+      ]
+    }
+  ]
+}

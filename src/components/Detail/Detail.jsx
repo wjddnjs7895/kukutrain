@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { getHeightPixel, getWidthPixel, HEIGHT } from '../../utils/responsive';
 import { ReactComponent as Marker } from '../../Assets/icon/Marker.svg';
 import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
+import data from '../../data/data.json';
 
 function FoodComponent({ image, name }) {
   return (
@@ -13,90 +14,14 @@ function FoodComponent({ image, name }) {
   );
 }
 
-export default function Detail({ locY }) {
+export default function Detail({ locY, restaurant_id }) {
   const ICON_SIZE = getWidthPixel(24);
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
-  const foodList = [
-    {
-      id: 0,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 1,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 2,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 3,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 4,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 5,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 6,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 7,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 8,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 9,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 10,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 11,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 12,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 13,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-    {
-      id: 14,
-      name: '돼지불고기',
-      img: 'Image',
-    },
-  ];
+  const foodList = data.restaurants.find(restaurant => restaurant_id === restaurant.id);
 
   return (
-    <StyledDetailContainer>
+    <StyledDetailContainer locY={locY}>
       <div className="bl-container main">
         <div className="img item"></div>
         <StyledFont className="name item" color={COLOR[0]} fw={600}>
@@ -127,7 +52,7 @@ export default function Detail({ locY }) {
       <div className="split"></div>
 
       <StyledGrid className="bl-container" locY={locY}>
-        {foodList.map(food => (
+        {foodList.snack.map(food => (
           <FoodComponent key={food.id} image={food.img} name={food.name} />
         ))}
       </StyledGrid>
@@ -138,6 +63,8 @@ export default function Detail({ locY }) {
 const StyledDetailContainer = styled.div`
   width: 100%;
   margin-top: ${getHeightPixel(50)};
+  height: ${({ locY }) => getHeightPixel(HEIGHT - locY)};
+  overflow-y: auto;
 
   .split {
     margin: 0.375em 0;
