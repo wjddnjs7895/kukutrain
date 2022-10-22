@@ -7,10 +7,12 @@ import { HEIGHT } from '../utils/responsive';
 
 function MainPage() {
   const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(205)));
+  const [selected, setSelected] = useState(-1);
+
   return (
     <PageStyled>
-      <MapContainer />
-      <BottomContainer locY={locY} setLocY={setLocY} />
+      <MapContainer setSelected={setSelected} />
+      <BottomContainer locY={locY} setLocY={setLocY} selected={selected} setSelected={setSelected} />
     </PageStyled>
   );
 }

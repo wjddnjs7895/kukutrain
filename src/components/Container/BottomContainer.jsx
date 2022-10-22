@@ -5,8 +5,7 @@ import { getHeightPixel } from '../../utils/responsive';
 import { BottomHeader } from '../Header/BottomHeader';
 import BodyContainer from './BodyContainer';
 
-export default function BottomContainer({ locY, setLocY }) {
-  const [selected, setSelected] = useState(-1);
+export default function BottomContainer({ locY, setLocY, selected, setSelected }) {
   return (
     <ContainerStyled marginTop={locY < 796 ? (locY > 0 ? locY + 'px' : getHeightPixel(0)) : getHeightPixel(796)}>
       <BottomHeader setLocY={setLocY} locY={locY} selected={selected} setSelected={setSelected} />
