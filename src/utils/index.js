@@ -14,6 +14,8 @@ export function deviceModel() {
     } else if (userAgent.search('iphone') > -1 || userAgent.search('ipod') > -1 || userAgent.search('ipad') > -1) {
       if (userAgent.search('naver') > -1) {
         currentOS = 'ios/naver';
+      } else if (userAgent.search('kakao')) {
+        currentOS = 'ios/kakao';
       } else {
         currentOS = 'ios';
       }
