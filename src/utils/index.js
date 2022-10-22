@@ -13,6 +13,9 @@ export function deviceModel() {
       document.querySelector('body').getAttribute('data-device', androidversion);
     } else if (userAgent.search('iphone') > -1 || userAgent.search('ipod') > -1 || userAgent.search('ipad') > -1) {
       currentOS = 'ios';
+      if (userAgent.search('Naver') > -1) {
+        currentPS = 'ios/naver';
+      }
     } else {
       currentOS = 'else';
     }
