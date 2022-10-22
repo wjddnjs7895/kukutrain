@@ -8,7 +8,8 @@ import { deviceModel } from '../utils';
 
 function MainPage() {
   const [selected, setSelected] = useState(-1);
-  const OFFSET__LOCY = deviceModel() === 'android' ? 210 : deviceModel() === 'ios' ? 115 : 105;
+  const OFFSET__LOCY =
+    deviceModel() === 'android' ? 210 : deviceModel() === 'ios' ? 115 : deviceModel() === 'ios/naver' ? 255 : 105;
   const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(OFFSET__LOCY)));
 
   return (

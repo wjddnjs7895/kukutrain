@@ -12,7 +12,11 @@ export function deviceModel() {
       let androidversion = parseFloat(deviceAgent.match(/Android\s+([\d\.]+)/)[1]);
       document.querySelector('body').getAttribute('data-device', androidversion);
     } else if (userAgent.search('iphone') > -1 || userAgent.search('ipod') > -1 || userAgent.search('ipad') > -1) {
-      currentOS = 'ios';
+      if (userAgent.search('naver') > -1) {
+        currentOS = 'ios/naver';
+      } else {
+        currentOS = 'ios';
+      }
     } else {
       currentOS = 'else';
     }
