@@ -5,7 +5,7 @@ import { getHeightPixel } from '../../utils/responsive';
 
 import { palette } from '../../constants/palette';
 
-export default function BodyContainer() {
+export default function BodyContainer({ locY }) {
   return <ContainerStyled />;
 }
 
