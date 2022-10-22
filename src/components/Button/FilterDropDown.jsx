@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 import { ReactComponent as UpArrowIcon } from '../../Assets/icon/up_arrow.svg';
 import DropDown from './DropDown';
 
 export default function FilterDropDown({ text, isVisible, setVisible, setType }) {
+  const [flag, setFlag] = useState(false);
+  useEffect(() => {
+    let timeoutId;
+    if (isVisible) {
+      setFlag(true);
+    } else {
+      timeoutId = setTimeout(() => setFlag(false), 150);
+    }
+    return () => {
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [isVisible]);
   return (
     <>
-      {isVisible ? <DropDown setType={setType} setVisible={setVisible} /> : null}
+      {flag ? <DropDown setType={setType} setVisible={setVisible} isVisible={isVisible} /> : null}
       <ButtonStyled onClick={() => setVisible(!isVisible)}>{text}</ButtonStyled>
       <IconStyled />
     </>

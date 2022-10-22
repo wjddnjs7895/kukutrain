@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { palette } from '../../constants/palette';
 import { getHeightPixel, getWidthPixel } from '../../utils/responsive';
 
-export default function DropDown({ setType, setVisible }) {
+export default function DropDown({ setType, setVisible, isVisible }) {
   return (
-    <ContainerStyled>
+    <ContainerStyled isVisible={isVisible}>
       <ButtonStyled
         onClick={() => {
           setVisible(false);
@@ -36,6 +36,24 @@ export default function DropDown({ setType, setVisible }) {
   );
 }
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
 const ContainerStyled = styled.div`
   width: ${getWidthPixel(105)};
   padding-top: ${getHeightPixel(5)};
@@ -47,6 +65,10 @@ const ContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fadeIn : fadeOut} 0.2s ease-out;
+    transition: visibility 0.15s ease-out;
+  `};
 `;
 
 const ButtonStyled = styled.button`

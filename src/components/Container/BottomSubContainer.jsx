@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import FilterDropDown from '../Button/FilterDropDown';
 import { FILTER__LIST, FILTER__TYPE__LIST } from '../../constants';
@@ -7,10 +7,10 @@ import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 import FilterButton from '../Button/FilterButton';
 import Blank from '../Blank';
 
-export default function BottomSubContainer({ type, idxList, setIdx, setType }) {
+export default function BottomSubContainer({ type, idxList, setIdx, setType, isToggle }) {
   const [isVisible, setVisible] = useState(false);
   return (
-    <ContainerStyled>
+    <ContainerStyled isVisible={isToggle}>
       <InnerContainerStyled>
         <FilterDropDown
           text={type === -1 ? '선택' : FILTER__LIST[FILTER__TYPE__LIST[type]].title}
@@ -40,6 +40,24 @@ export default function BottomSubContainer({ type, idxList, setIdx, setType }) {
   );
 }
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
 const ContainerStyled = styled.div`
   width: ${getWidthPixel(428)};
   height: ${getHeightPixel(150)};
@@ -47,6 +65,10 @@ const ContainerStyled = styled.div`
   position: absolute;
   margin-top: -${getHeightPixel(70)};
   border-radius: ${getWidthPixel(30)};
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fadeIn : fadeOut} 0.2s ease-out;
+    transition: visibility 0.15s ease-out;
+  `}
 `;
 
 const InnerContainerStyled = styled.div`

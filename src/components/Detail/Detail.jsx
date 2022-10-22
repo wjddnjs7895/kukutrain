@@ -62,7 +62,7 @@ export default function Detail({ locY, restaurant_id }) {
 
 const StyledDetailContainer = styled.div`
   width: 100%;
-  margin-top: ${getHeightPixel(50)};
+  margin-top: -${getHeightPixel(15)};
   height: ${({ locY }) => getHeightPixel(HEIGHT - locY)};
   overflow-y: auto;
 
