@@ -108,7 +108,9 @@ export function BottomHeader({ locY, setLocY, setSelected, selected }) {
               <BottomSubOff />
             </BottomSubOffContainer>
           )}
-          <StyledHeaderElement />
+          <HeaderBox>
+            <StyledHeaderElement />
+          </HeaderBox>
           <RowContainerStyled>
             <MarginStyled>
               <Button text={'화장실'} idx={0} isSelected={selectedIdx === 0} onClick={() => setIdx(0)}>
@@ -198,10 +200,13 @@ const RowContainerStyled = styled.div`
 `;
 
 const StyledHeaderElement = styled(BottomHeaderElement)`
+  filter: drop-shadow(0px -10px 10px #0000001a);
+`;
+
+const HeaderBox = styled.div`
   width: ${getWidthPixel(428)};
   height: ${getHeightPixel(86)};
   position: absolute;
-  filter: drop-shadow(0px -10px 10px #0000001a);
 `;
 
 const HeaderStyled = styled.div`
