@@ -7,7 +7,7 @@ import { HEIGHT } from '../utils/responsive';
 import { deviceModel } from '../utils';
 
 function MainPage() {
-  const OFFSET__LOCY = deviceModel() === 'android' ? 210 : deviceModel() === 'ios' ? 105 : 210;
+  const OFFSET__LOCY = deviceModel() === 'android' ? 210 : deviceModel() === 'ios' ? 105 : 105;
   const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(OFFSET__LOCY)));
   return (
     <PageStyled>

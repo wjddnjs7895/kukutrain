@@ -19,7 +19,5 @@ export function deviceModel() {
   } else {
     currentOS = 'nomobile';
   }
-
-  document.querySelector('body').classList.add(currentOS);
+  return currentOS;
 }
-deviceModel();
