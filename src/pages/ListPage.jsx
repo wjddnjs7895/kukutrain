@@ -4,12 +4,26 @@ import StoreTitleContainer from '../components/Container/StoreTitleContainer';
 import { palette } from '../constants/palette';
 import { getWidthPixel } from '../utils/responsive';
 
-export default function ListPage() {
+export default function ListPage({ setSelected }) {
   return (
     <PageStyled>
-      <StoreTitleContainer title={'춘자'} subTitle={'교우회명'} startTime={'17:00'} endTime={'7:00'} />
+      <StoreTitleContainer
+        id={0}
+        title={'춘자'}
+        subTitle={'교우회명'}
+        startTime={'17:00'}
+        endTime={'7:00'}
+        setSelected={setSelected}
+      />
       <DividerStyled />
-      <StoreTitleContainer title={'춘자'} subTitle={'교우회명'} startTime={'17:00'} endTime={'7:00'} />
+      <StoreTitleContainer
+        id={1}
+        title={'춘자'}
+        subTitle={'교우회명'}
+        startTime={'17:00'}
+        endTime={'7:00'}
+        setSelected={setSelected}
+      />
     </PageStyled>
   );
 }

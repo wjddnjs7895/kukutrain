@@ -7,9 +7,9 @@ import Blank from '../Blank';
 import { ReactComponent as TimeIcon } from '../../Assets/icon/time.svg';
 import { palette } from '../../constants/palette';
 
-export default function StoreTitleContainer({ title, subTitle, startTime, endTime }) {
+export default function StoreTitleContainer({ id, title, subTitle, startTime, endTime, setSelected }) {
   return (
-    <ContainerStyled>
+    <ContainerStyled onClick={() => setSelected(id)}>
       <ImageStyled />
       <InnerContainerStyled>
         <RowContainerStyled>
