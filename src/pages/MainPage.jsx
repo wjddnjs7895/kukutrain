@@ -6,7 +6,7 @@ import { getHeightPixel, getPixelToNumber } from '../utils/responsive';
 import { HEIGHT } from '../utils/responsive';
 
 function MainPage() {
-  const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(105)));
+  const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(205)));
   return (
     <PageStyled>
       <MapContainer />
