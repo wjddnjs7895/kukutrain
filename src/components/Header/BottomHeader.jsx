@@ -31,9 +31,9 @@ export function BottomHeader({ locY, setLocY, setSelected, selected }) {
   useEffect(() => {
     let timeoutId;
     if (isToggle) {
-      timeoutId = setTimeout(() => setFlag(true), 500);
+      timeoutId = setTimeout(() => setFlag(true), 490);
     } else {
-      timeoutId = setTimeout(() => setFlag(false), 500);
+      timeoutId = setTimeout(() => setFlag(false), 490);
     }
     return () => {
       if (timeoutId !== undefined) {
