@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { getHeightPixel, getWidthPixel } from '../../utils/responsive';
+import { getHeightPixel, getWidthPixel, HEIGHT } from '../../utils/responsive';
 import { ReactComponent as Marker } from '../../Assets/icon/Marker.svg';
 import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
 
@@ -13,7 +13,7 @@ function FoodComponent({ image, name }) {
   );
 }
 
-export default function Detail() {
+export default function Detail({ locY }) {
   const ICON_SIZE = getWidthPixel(24);
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
@@ -78,9 +78,23 @@ export default function Detail() {
       name: '돼지불고기',
       img: 'Image',
     },
+    {
+      id: 12,
+      name: '돼지불고기',
+      img: 'Image',
+    },
+    {
+      id: 13,
+      name: '돼지불고기',
+      img: 'Image',
+    },
+    {
+      id: 14,
+      name: '돼지불고기',
+      img: 'Image',
+    },
   ];
 
-  const foodHeight = foodList.length % 3 === 0 ? foodList.length / 3 : foodList.length / 3 + 1;
   return (
     <StyledDetailContainer>
       <div className="bl-container main">
@@ -112,7 +126,7 @@ export default function Detail() {
 
       <div className="split"></div>
 
-      <StyledGrid className="bl-container" foodHeight={foodHeight}>
+      <StyledGrid className="bl-container" locY={locY}>
         {foodList.map(food => (
           <FoodComponent key={food.id} image={food.img} name={food.name} />
         ))}
@@ -127,7 +141,7 @@ const StyledDetailContainer = styled.div`
 
   .split {
     margin: 0.375em 0;
-    border: 0.125rem solid #dedede;
+    border: ${() => getHeightPixel(1.5)} solid #dedede;
   }
 
   .bl-container {
@@ -188,7 +202,7 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  max-height: ${({ foodHeight }) => getHeightPixel(150 * foodHeight)};
+  max-height: ${({ locY }) => getHeightPixel(HEIGHT - (locY + 275))};
   justify-items: center;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
