@@ -5,7 +5,7 @@ import { ReactComponent as Marker } from '../../Assets/icon/Marker.svg';
 import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
 import data from '../../data/data.json';
 
-function FoodComponent({ image, name }) {
+function FoodComponent({ image = '이미지 없음', name }) {
   return (
     <div className="item">
       <div className="img">{image}</div>
@@ -18,17 +18,17 @@ export default function Detail({ locY, restaurant_id }) {
   const ICON_SIZE = getWidthPixel(24);
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
-  const foodList = data.restaurants.find(restaurant => restaurant_id === restaurant.id);
-
+  const market = data['datas'].find(data => data.id === restaurant_id);
+  const { name, subname, addr, phone } = market;
   return (
     <StyledDetailContainer locY={locY}>
       <div className="bl-container main">
         <div className="img item"></div>
         <StyledFont className="name item" color={COLOR[0]} fw={600}>
-          춘자
+          {name}
         </StyledFont>
         <StyledFont className="type item" color={COLOR[1]}>
-          포장마차
+          {subname}
         </StyledFont>
       </div>
 
@@ -38,13 +38,13 @@ export default function Detail({ locY, restaurant_id }) {
         <div className="pos bl-item">
           <Marker className="marker item-con" width={ICON_SIZE} height={ICON_SIZE} />
           <StyledFont className="addr item-text" color={COLOR[2]}>
-            서울 성북구 고려대로 26길 45-4 1층 or 지하 1층
+            {addr}
           </StyledFont>
         </div>
         <div className="contact bl-item">
           <Call className="call item-icon" width={ICON_SIZE} height={ICON_SIZE} />
           <StyledFont className="number item-text" color={COLOR[2]}>
-            0507-1309-2810
+            {phone}
           </StyledFont>
         </div>
       </div>
@@ -52,9 +52,8 @@ export default function Detail({ locY, restaurant_id }) {
       <div className="split"></div>
 
       <StyledGrid className="bl-container" locY={locY}>
-        {foodList.snack.map(food => (
-          <FoodComponent key={food.id} image={food.img} name={food.name} />
-        ))}
+        {market['snack'] &&
+          market['snack'].map((snack, idx) => <FoodComponent key={idx} image={snack.img} name={snack.name} />)}
       </StyledGrid>
     </StyledDetailContainer>
   );

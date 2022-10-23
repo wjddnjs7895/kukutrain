@@ -1,115 +1,805 @@
 {
-  "markers": [
+  "datas": [
     {
       "id": 0,
+      "name": "맛닭꼬",
+      "subname": "치킨, 닭강정",
       "type": "restaurant",
-      "name": "춘자",
+      "group": "교우회장",
+      "addr": "서울 성북구 고려대로24길 27",
+      "phone": "02-953-5592",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
       "position": {
-        "lat": 37.5843918209331,
-        "lng": 127.02957798348103
+        "lat": 37.5849053919386,
+        "lng": 127.029558373541
       }
     },
     {
       "id": 1,
-      "type": "cheer",
-      "name": "응원단",
+      "name": "홍도야빈대떡",
+      "subname": "전, 빈대떡",
+      "type": "restaurant",
+      "group": "법대교우회",
+      "addr": "서울 동대문구 제기로 11-1 1층",
+      "phone": "02-953-1092",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
       "position": {
-        "lat": 37.58317774961192,
-        "lng": 127.02950957395034
+        "lat": 37.5866114720508,
+        "lng": 127.034365259234
       }
     },
     {
       "id": 2,
-      "type": "toilet",
-      "name": "정보관 화장실",
+      "name": "충주집",
+      "subname": "포장마차",
+      "type": "restaurant",
+      "group": "법대교우회",
+      "addr": "서울 동대문구 제기로6길 5",
+      "phone": "02-923-1068",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
       "position": {
-        "lat": 37.58520749653496,
-        "lng": 127.02845178318773
+        "lat": 37.5861969550511,
+        "lng": 127.034571694972
       }
-    }
-  ],
-  "restaurants": [
+    },
     {
-      "id": 0,
-      "restaurant_id": 0,
-      "main_image": "main_image",
+      "id": 3,
+      "name": "쪼끼쪼끼",
+      "subname": "맥주, 호프",
+      "type": "restaurant",
+      "group": "경영대교우회",
+      "addr": "서울 성북구 고려대로24길 3-42",
+      "phone": "02-922-6887",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "맥주"],
       "snack": [
         {
-          "id": 0,
-          "name": "돼지불고기",
-          "img": "Image"
+          "name": "치킨",
+          "image": null
         },
         {
-          "id": 1,
-          "name": "돼지불고기",
-          "img": "Image"
+          "name": "소세지",
+          "image": null
         },
         {
-          "id": 2,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 3,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 4,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 5,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 6,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 7,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 8,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 9,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 10,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 11,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 12,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 13,
-          "name": "돼지불고기",
-          "img": "Image"
-        },
-        {
-          "id": 14,
-          "name": "돼지불고기",
-          "img": "Image"
+          "name": "홍어무침",
+          "image": null
         }
-      ]
+      ],
+      "train": [
+        {
+          "name": "치킨",
+          "image": null
+        },
+        {
+          "name": "소세지",
+          "image": null
+        },
+        {
+          "name": "생맥주",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5859550117617,
+        "lng": 127.029705973956
+      }
+    },
+    {
+      "id": 4,
+      "name": "유자유",
+      "subname": "떡볶이",
+      "type": "restaurant",
+      "group": "문과대교우회",
+      "addr": "서울 성북구 고려대로24길 48 2층",
+      "phone": "0507-1393-7777",
+      "img_main": null,
+      "time": "6:30~9:30",
+      "drink": ["막걸리"],
+      "snack": [
+        {
+          "name": "김치떡볶이",
+          "image": null
+        },
+        {
+          "name": "치킨반마리",
+          "image": null
+        },
+        {
+          "name": "오뎅탕",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5839751864072,
+        "lng": 127.029277794839
+      }
+    },
+    {
+      "id": 5,
+      "name": "삼성통닭",
+      "subname": "치킨, 닭강정",
+      "type": "restaurant",
+      "group": "의대교우회",
+      "addr": "서울 성북구 고려대로 92",
+      "phone": "02-927-1331",
+      "img_main": null,
+      "time": "7:00~9:00",
+      "drink": ["맥주"],
+      "snack": [
+        {
+          "name": "후라이드치킨",
+          "iamge": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5861014756254,
+        "lng": 127.029496575624
+      }
+    },
+    {
+      "id": 6,
+      "name": "산적",
+      "subname": "한식",
+      "type": "restaurant",
+      "group": "간호대교우회",
+      "addr": "서울 성북구 고려대로26길 49",
+      "phone": "02-816-9438",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.5840515578857,
+        "lng": 127.030124119161
+      }
+    },
+    {
+      "id": 7,
+      "name": "춘자1층",
+      "subname": "포장마차",
+      "type": "restaurant",
+      "group": "경영11동기회",
+      "addr": "서울 성북구 고려대로26길 45-4 1층",
+      "phone": "0507-1309-2810",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "찢어진만둣국",
+          "image": null
+        },
+        {
+          "name": "닭강정",
+          "image": null
+        },
+        {
+          "name": "김치삼겹비빔면",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "맥주 (잠정)",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.584328556723,
+        "lng": 127.030345004053
+      }
+    },
+    {
+      "id": 8,
+      "name": "별난주점",
+      "subname": "맥주, 호프",
+      "type": "restaurant",
+      "group": "81학번동기회",
+      "addr": "서울 성북구 고려대로24길 5",
+      "phone": "02-953-7288",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.5859280288415,
+        "lng": 127.029519151081
+      }
+    },
+    {
+      "id": 9,
+      "name": "꼬꼬아찌",
+      "subname": "치킨, 닭강정",
+      "type": "restaurant",
+      "group": "83학번동기회",
+      "addr": "서울 성북구 고려대로26길 50 1층",
+      "phone": "02-922-2654",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "마른 안주 (잠정)",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5840944126284,
+        "lng": 127.029897703012
+      }
+    },
+    {
+      "id": 10,
+      "name": "역전할머니맥주",
+      "subname": "맥주, 호프",
+      "type": "restaurant",
+      "group": "86학번동기회",
+      "addr": "서울 성북구 고려대로24길 14",
+      "phone": "02-929-1226",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "아이셔에 이슬", "맥주"],
+      "snack": [
+        {
+          "name": "순살치킨",
+          "image": null
+        },
+        {
+          "name": "짜파구리",
+          "image": null
+        },
+        {
+          "name": "염통꼬치",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5856578112291,
+        "lng": 127.029196370008
+      }
+    },
+    {
+      "id": 11,
+      "name": "서서갈비",
+      "subname": "육류, 고기요리",
+      "type": "restaurant",
+      "group": "88학번동기회",
+      "addr": "서울 성북구 안암로 81-4",
+      "phone": "02-953-3451",
+      "img_main": null,
+      "time": "6:30~9:30",
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.5836236336514,
+        "lng": 127.029937140336
+      }
+    },
+    {
+      "id": 12,
+      "name": "삼파전",
+      "subname": "전, 빈대떡",
+      "type": "restaurant",
+      "group": "89학번동기회",
+      "addr": "서울 성북구 고려대로26길 8",
+      "phone": "02-922-0623",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.5858265910161,
+        "lng": 127.029821972738
+      }
+    },
+    {
+      "id": 13,
+      "name": "88왕대포",
+      "subname": "포장마차",
+      "type": "restaurant",
+      "group": "90학번동기회",
+      "addr": "서울 성북구 고려대로26길 49",
+      "phone": "02-922-4085",
+      "img_main": null,
+      "time": "6:30~9:30",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "오뎅탕",
+          "image": null
+        },
+        {
+          "name": "두부김치",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "생맥주",
+          "image": null
+        },
+        {
+          "name": "마른 안주",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.584143885084,
+        "lng": 127.03022039063
+      }
+    },
+    {
+      "id": 14,
+      "name": "막걸리집",
+      "subname": "요리주점",
+      "type": "restaurant",
+      "group": "92학번입학30주년준비위원회",
+      "addr": "서울 성북구 고려대로26길 14",
+      "phone": "0507-1369-0588",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "막걸리"],
+      "snack": [
+        {
+          "name": "두부김치",
+          "image": null
+        },
+        {
+          "name": "고추장돼지불고기",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.585506739252,
+        "lng": 127.029819014666
+      }
+    },
+    {
+      "id": 15,
+      "name": "38포차",
+      "subname": "맥주, 호프",
+      "type": "restaurant",
+      "group": "97학번동기회",
+      "addr": "서울 성북구 고려대로26길 45-5 1층",
+      "phone": "010-9431-1452",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.5845493327027,
+        "lng": 127.030217724097
+      }
+    },
+    {
+      "id": 16,
+      "name": "한잔의추억",
+      "subname": "요리주점",
+      "type": "restaurant",
+      "group": "문과대08학번동기회",
+      "addr": "서울 성북구 고려대로26길 30",
+      "phone": "02-3291-4848",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["막걸리"],
+      "snack": [
+        {
+          "name": "도토리묵무침",
+          "image": null
+        },
+        {
+          "name": "부추전",
+          "image": null
+        },
+        {
+          "name": "계란찜",
+          "image": null
+        },
+        {
+          "name": "주먹밥",
+          "image": null
+        },
+        {
+          "name": "콩나물국",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "막걸리",
+          "image": null
+        },
+        {
+          "name": "떡볶이",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5849413597274,
+        "lng": 127.029844263191
+      }
+    },
+    {
+      "id": 17,
+      "name": "쿠마",
+      "subname": "일식당",
+      "type": "restaurant",
+      "group": "화학과교우회",
+      "addr": "서울 성북구 고려대로26길 9",
+      "phone": "02-922-3222",
+      "img_main": null,
+      "time": "6:45~9:45",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "오뎅탕",
+          "image": null
+        },
+        {
+          "name": "제육볶음",
+          "image": null
+        },
+        {
+          "name": "치킨가라아게",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "오뎅탕",
+          "image": null
+        },
+        {
+          "name": "제육볶음",
+          "image": null
+        },
+        {
+          "name": "치킨가라아게",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5857634655302,
+        "lng": 127.030042725066
+      }
+    },
+    {
+      "id": 18,
+      "name": "안암꼬치",
+      "subname": "오뎅, 꼬치",
+      "type": "restaurant",
+      "group": "화공학과교우회",
+      "addr": "서울 성북구 안암로 85",
+      "phone": "02-925-9417",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "고갈비",
+          "image": null
+        },
+        {
+          "name": "오징어무침",
+          "image": null
+        },
+        {
+          "name": "제육볶음",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5835965534407,
+        "lng": 127.030135257412
+      }
+    },
+    {
+      "id": 19,
+      "name": "박군포차",
+      "subname": "포장마차",
+      "type": "restaurant",
+      "group": "행정학과교우회",
+      "addr": "서울 성북구 고려대로26길 34",
+      "phone": null,
+      "img_main": null,
+      "time": "6:00~9:00",
+      "drink": ["소주", "막걸리"],
+      "snack": [
+        {
+          "name": "오뎅탕",
+          "image": null
+        },
+        {
+          "name": "제육볶음",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "막걸리",
+          "image": null
+        },
+        {
+          "name": "떡볶이",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.584689075952,
+        "lng": 127.029866805995
+      }
+    },
+    {
+      "id": 20,
+      "name": "땡전집",
+      "subname": "전통, 민속주점",
+      "type": "restaurant",
+      "group": "경제인회",
+      "addr": "서울 성북구 고려대로24길 24",
+      "phone": "02-929-8295",
+      "img_main": null,
+      "time": "6:00~9:00",
+      "drink": ["막걸리", "소주"],
+      "snack": [
+        {
+          "name": "모듬전",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "모듬전",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5851712617261,
+        "lng": 127.029249958691
+      }
+    },
+    {
+      "id": 21,
+      "name": "늘,안암",
+      "subname": "술집",
+      "type": "restaurant",
+      "group": "KUfit",
+      "addr": "서울 성북구 고려대로24가길 13-2 1층",
+      "phone": "0507-1329-1748",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["막걸리", "소주", "맥주"],
+      "snack": [
+        {
+          "name": "한우++ 미역국",
+          "image": null
+        },
+        {
+          "name": "잡채 (잠정)",
+          "image": null
+        },
+        {
+          "name": "백순대 (잠정)",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "아롱사태무침",
+          "image": null
+        },
+        {
+          "name": "막걸리",
+          "image": null
+        },
+        {
+          "name": "소주",
+          "image": null
+        },
+        {
+          "name": "맥주",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5853354244257,
+        "lng": 127.030314277653
+      }
+    },
+    {
+      "id": 22,
+      "name": "춘자지하",
+      "subname": "포장마차",
+      "type": "restaurant",
+      "group": "보과대교우회",
+      "addr": "서울 성북구 고려대로26길 45-4 지하1층",
+      "phone": "0507-1309-2810",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["소주", "맥주"],
+      "snack": [
+        {
+          "name": "찢어진만둣국",
+          "image": null
+        },
+        {
+          "name": "돼지불고기",
+          "image": null
+        },
+        {
+          "name": "김치삼겹비빔면",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5846373458009,
+        "lng": 127.029561097995
+      }
+    },
+    {
+      "id": 23,
+      "name": "신룽푸마라탕",
+      "subname": "마라탕",
+      "type": "restaurant",
+      "group": "91학번동기회",
+      "addr": "서울 성북구 고려대로24길 35",
+      "phone": "02-6404-2014",
+      "img_main": null,
+      "time": "7:00~10:00",
+      "drink": ["맥주"],
+      "snack": [
+        {
+          "name": "A세트(마라샹궈, 꿔바로우)",
+          "image": null
+        },
+        {
+          "name": "B세트(마라샹궈, 마라탕)",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5846486110489,
+        "lng": 127.029549780694
+      }
+    },
+    {
+      "id": 24,
+      "name": "오징어나라",
+      "subname": "오징어요리",
+      "type": "restaurant",
+      "group": "경영대단결B반교우회",
+      "addr": "서울 성북구 고려대로24가길 6",
+      "phone": "02-924-5484",
+      "img_main": null,
+      "time": "7:00~9:30",
+      "drink": ["소주", "맥주", "막걸리"],
+      "snack": [
+        {
+          "name": "골뱅이 (잠정)",
+          "image": null
+        },
+        {
+          "name": "회무침 (잠정)",
+          "image": null
+        },
+        {
+          "name": "김치부침개",
+          "image": null
+        },
+        {
+          "name": "튀김",
+          "image": null
+        }
+      ],
+      "train": [
+        {
+          "name": "골뱅이 (잠정)",
+          "image": null
+        },
+        {
+          "name": "회무침 (잠정)",
+          "image": null
+        },
+        {
+          "name": "김치부침개",
+          "image": null
+        },
+        {
+          "name": "튀김",
+          "image": null
+        }
+      ],
+      "position": {
+        "lat": 37.5851576323178,
+        "lng": 127.02970848755
+      }
+    },
+    {
+      "id": 25,
+      "name": "참숯불3392",
+      "subname": "소고기구이",
+      "type": "restaurant",
+      "group": "언론인교우회",
+      "addr": "서울 성북구 안암로 89-5",
+      "phone": "02-926-3392",
+      "img_main": null,
+      "time": null,
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.584049259762,
+        "lng": 127.030302434443
+      }
+    },
+    {
+      "id": 26,
+      "name": "영철버거",
+      "subname": "햄버거",
+      "type": "restaurant",
+      "group": "언어학과교우회",
+      "addr": "서울 성북구 안암로9가길 100 1층",
+      "phone": "02-922-1668 ",
+      "img_main": null,
+      "time": "7:00~11:30",
+      "drink": ["맥주"],
+      "snack": [
+        {
+          "name": "윙",
+          "image": null
+        },
+        {
+          "name": "모듬안주",
+          "image": null
+        }
+      ],
+      "train": null,
+      "position": {
+        "lat": 37.5831306249976,
+        "lng": 127.028790638516
+      }
+    },
+    {
+      "id": 999,
+      "name": "응원단",
+      "type": "cheer",
+      "group": "응원단",
+      "addr": null,
+      "phone": null,
+      "time": "7:00 ~ 8:00",
+      "drink": null,
+      "snack": null,
+      "train": null,
+      "position": {
+        "lat": 37.58365528098375,
+        "lng": 127.02948994963714
+      }
     }
   ]
 }

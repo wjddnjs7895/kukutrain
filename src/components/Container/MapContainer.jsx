@@ -8,13 +8,13 @@ import { WIDTH } from '../../utils/responsive';
 import data from '../../data/data.json';
 
 export default function MapContainer({ setSelected }) {
-  const { markers } = data;
+  const { datas } = data;
   const SIZE = 27;
 
   return (
     <StyledMap center={{ lat: 37.5843918209331, lng: 127.02957798348103 }}>
-      {markers.map(marker => {
-        const { id, position, type } = marker;
+      {datas.map(data => {
+        const { id, position, type } = data;
 
         if (type === 'restaurant') {
           return (
