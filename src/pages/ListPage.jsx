@@ -8,7 +8,6 @@ import Blank from '../components/Blank';
 import { TYPE__LIST } from '../constants';
 
 export default function ListPage({ setSelected, selectedIdx }) {
-  console.log(selectedIdx);
   return (
     <PageStyled>
       {data.datas.map((store, index) => {
