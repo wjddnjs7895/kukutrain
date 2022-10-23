@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { isMobile } from 'react-device-detect';
 import { getHeightPixel, getWidthPixel, HEIGHT, REAL__WIDTH, WIDTH } from './utils/responsive';
 import MainPage from './pages/MainPage';
+import RouteChangeTracker from './components/RouteChangeTracker';
 import Blank from './components/Blank';
 
 function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
-
+  RouteChangeTracker();
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     const handleResize = () => setWidth(window.innerWidth);
