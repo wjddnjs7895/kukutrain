@@ -18,10 +18,9 @@ import { ReactComponent as ChopStickRightIcon } from '../../Assets/icon/chopstic
 import BottomSubContainer from '../Container/BottomSubContainer';
 import BackHeader from './BackHeader';
 
-export function BottomHeader({ locY, setLocY, setSelected, selected }) {
+export function BottomHeader({ locY, setLocY, setSelected, selected, selectedIdx, setIdx }) {
   const SCROLL__OFFSET__Y = 40;
   const [isScroll, setScroll] = useState(false);
-  const [selectedIdx, setIdx] = useState(0);
   const [isToggle, setToggle] = useState(false);
   const [flag, setFlag] = useState(false);
   const [alcoholIdx, setAlcoholIdx] = useState([]);

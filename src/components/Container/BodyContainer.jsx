@@ -7,13 +7,13 @@ import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 import { palette } from '../../constants/palette';
 import Detail from '../Detail/Detail';
 
-export default function BodyContainer({ locY, selected, setSelected }) {
+export default function BodyContainer({ locY, selected, setSelected, selectedIdx }) {
   return (
     <ContainerStyled>
       {selected === -1 ? (
         <>
           <DividerStyled />
-          <ListPage setSelected={setSelected} />
+          <ListPage setSelected={setSelected} selectedIdx={selectedIdx} />
         </>
       ) : (
         <Detail locY={locY} restaurant_id={selected} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 
@@ -9,7 +9,7 @@ import Blank from '../Blank';
 export default function Button({ idx, text, isSelected, onClick, children }) {
   return (
     <ContainerStyled>
-      <BarStyled buttonColor={isSelected ? palette.crimson : palette.background} />
+      {isSelected ? <BarStyled idx={idx} /> : <GrayBarStyled />}
       <ButtonStyled buttonColor={isSelected ? palette.crimson : palette.gray} onClick={onClick}>
         {children}
         <Blank width={getWidthPixel(10)} />
@@ -28,11 +28,18 @@ const ContainerStyled = styled.div`
 
 const BarStyled = styled.div`
   border-radius: 2;
-  ${({ buttonColor = palette.gray }) => css`
-    border: 1px solid ${buttonColor};
-  `}
+  border: 1px solid ${palette.crimson};
   width: ${getWidthPixel(42)};
-  margin-bottom: ${getHeightPixel(21)};
+  ${({ idx }) => css`
+    animation: ${idx === 0 ? moveLeft : moveRight} 0.7s ease-in-out;
+    transition: visibility 0.7s ease-in-out;
+  `}
+`;
+
+const GrayBarStyled = styled.div`
+  border-radius: 2;
+  border: 1px solid ${palette.none};
+  width: ${getWidthPixel(42)};
 `;
 
 const ButtonStyled = styled.button`
@@ -44,8 +51,27 @@ const ButtonStyled = styled.button`
     color: ${buttonColor};
   `}
   display: flex;
+  margin-top: ${getHeightPixel(21)};
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: ${getWidthPixel(16)};
+`;
+
+const moveLeft = keyframes`
+  0% {
+    transform: translateX(${getWidthPixel(250)});
+  }
+  100% {
+    transform: translateX(${getWidthPixel(0)});
+  }
+`;
+
+const moveRight = keyframes`
+  0% {
+    transform: translateX(${getWidthPixel(-250)});
+  }
+  100% {
+    transform: translateX(${getWidthPixel(0)});
+  }
 `;

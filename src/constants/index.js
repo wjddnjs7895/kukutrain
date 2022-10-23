@@ -14,3 +14,5 @@ export const FILTER__LIST = {
 };
 
 export const FILTER__TYPE__LIST = ['alcohol', 'food', 'noise'];
+
+export const TYPE__LIST = ['toilet', 'restaurant', 'cheer'];

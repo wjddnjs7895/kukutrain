@@ -6,10 +6,18 @@ import { BottomHeader } from '../Header/BottomHeader';
 import BodyContainer from './BodyContainer';
 
 export default function BottomContainer({ locY, setLocY, selected, setSelected }) {
+  const [selectedIdx, setIdx] = useState(0);
   return (
     <ContainerStyled marginTop={locY < 796 ? (locY > 0 ? locY + 'px' : getHeightPixel(0)) : getHeightPixel(796)}>
-      <BottomHeader setLocY={setLocY} locY={locY} selected={selected} setSelected={setSelected} />
-      <BodyContainer locY={locY} selected={selected} setSelected={setSelected} />
+      <BottomHeader
+        setLocY={setLocY}
+        locY={locY}
+        selected={selected}
+        setSelected={setSelected}
+        selectedIdx={selectedIdx}
+        setIdx={setIdx}
+      />
+      <BodyContainer locY={locY} selected={selected} setSelected={setSelected} selectedIdx={selectedIdx} />
     </ContainerStyled>
   );
 }
