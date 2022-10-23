@@ -66,8 +66,7 @@ const ContainerStyled = styled.div`
   margin-top: -${getHeightPixel(70)};
   border-radius: ${getWidthPixel(30)};
   ${({ isVisible }) => css`
-    animation: ${isVisible ? fadeIn : fadeOut} 0.2s ease-out;
-    transition: visibility 0.15s ease-out;
+    animation: ${isVisible ? fadeIn : fadeOut} 0.5s linear;
   `}
 `;
 
