@@ -44,6 +44,7 @@ const ContainerStyled = styled.div`
 
 const InnerContainerStyled = styled.div`
   display: flex;
+  width: ${getWidthPixel(240)};
   flex-direction: column;
   justify-content: center;
 `;

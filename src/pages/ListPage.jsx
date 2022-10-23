@@ -10,7 +10,7 @@ import { TYPE__LIST } from '../constants';
 export default function ListPage({ setSelected, selectedIdx }) {
   return (
     <PageStyled>
-      {data.datas.map((store, index) => {
+      {data.datas.map(store => {
         if (store.type === TYPE__LIST[selectedIdx]) {
           return (
             <ContainerStyled key={store.id}>
@@ -22,20 +22,18 @@ export default function ListPage({ setSelected, selectedIdx }) {
                 endTime={store.time ? store.time.split('~')[1] : '미정'}
                 setSelected={setSelected}
               />
-              {index !== data.datas.length - 1 ? <DividerStyled /> : <Blank height={getHeightPixel(400)} />}
+              <DividerStyled />
             </ContainerStyled>
           );
         }
       })}
+      <Blank height={getHeightPixel(400)} />
     </PageStyled>
   );
 }
 
 const PageStyled = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: ${palette.none};
   overflow: scroll;
 `;
