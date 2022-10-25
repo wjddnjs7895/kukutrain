@@ -14,7 +14,7 @@ function MainPage() {
       : deviceModel() === 'ios'
       ? 115
       : deviceModel() === 'ios/naver' || deviceModel() === 'ios/kakao'
-      ? 255
+      ? 305
       : 105;
   const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(OFFSET__LOCY)));
 
