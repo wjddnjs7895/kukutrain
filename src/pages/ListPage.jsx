@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import StoreTitleContainer from '../components/Container/StoreTitleContainer';
 import { palette } from '../constants/palette';
 import { getWidthPixel, getHeightPixel } from '../utils/responsive';
-import data from '../data/data.json';
+import { data } from '../data/data';
 import Blank from '../components/Blank';
 import { TYPE__LIST } from '../constants';
 
@@ -21,6 +21,7 @@ export default function ListPage({ setSelected, selectedIdx }) {
                 startTime={store.time ? store.time.split('~')[0] : '미정'}
                 endTime={store.time ? store.time.split('~')[1] : '미정'}
                 setSelected={setSelected}
+                mainImage={store.img_main}
               />
               <DividerStyled />
             </ContainerStyled>

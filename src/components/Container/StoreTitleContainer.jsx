@@ -7,10 +7,10 @@ import Blank from '../Blank';
 import { ReactComponent as TimeIcon } from '../../Assets/icon/time.svg';
 import { palette } from '../../constants/palette';
 
-export default function StoreTitleContainer({ id, title, subTitle, startTime, endTime, setSelected }) {
+export default function StoreTitleContainer({ id, title, subTitle, startTime, endTime, setSelected, mainImage }) {
   return (
     <ContainerStyled onClick={() => setSelected(id)}>
-      <ImageStyled />
+      <ImageStyled src={mainImage} />
       <InnerContainerStyled>
         <RowContainerStyled>
           <TitleStyled>{title}</TitleStyled>
@@ -49,10 +49,10 @@ const InnerContainerStyled = styled.div`
   justify-content: center;
 `;
 
-const ImageStyled = styled.div`
+const ImageStyled = styled.img`
   width: ${getWidthPixel(129)};
   height: ${getHeightPixel(84)};
-  border: 1px solid;
+  border-radius: ${getWidthPixel(5)};
 `;
 
 const TitleStyled = styled.div`

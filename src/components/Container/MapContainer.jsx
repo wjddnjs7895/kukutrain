@@ -5,7 +5,7 @@ import Restaurant from '../../Assets/icon/Restaurant.svg';
 import Cheer from '../../Assets/icon/Cheer.svg';
 import Toilet from '../../Assets/icon/Toilet.svg';
 import { WIDTH } from '../../utils/responsive';
-import data from '../../data/data.json';
+import { data } from '../../data/data';
 
 export default function MapContainer({ setSelected }) {
   const { datas } = data;

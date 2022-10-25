@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { getHeightPixel, getWidthPixel, HEIGHT } from '../../utils/responsive';
 import { ReactComponent as Marker } from '../../Assets/icon/Marker.svg';
 import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
-import data from '../../data/data.json';
+import { data } from '../../data/data';
 
 function FoodComponent({ image = '이미지 없음', name }) {
   return (
