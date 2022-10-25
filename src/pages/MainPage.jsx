@@ -20,7 +20,7 @@ function MainPage() {
 
   return (
     <PageStyled>
-      <MapContainer setSelected={setSelected} />
+      <MapContainer selected={selected} setSelected={setSelected} />
       <BottomContainer locY={locY} setLocY={setLocY} selected={selected} setSelected={setSelected} />
     </PageStyled>
   );

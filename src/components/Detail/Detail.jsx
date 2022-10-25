@@ -8,7 +8,7 @@ import { data } from '../../data/data';
 function FoodComponent({ image = '이미지 없음', name }) {
   return (
     <div className="item">
-      <div className="img">{image}</div>
+      <img className="img" src={image} alt="" />
       <div className="name">{name}</div>
     </div>
   );
@@ -19,11 +19,14 @@ export default function Detail({ locY, restaurant_id }) {
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
   const market = data['datas'].find(data => data.id === restaurant_id);
-  const { name, subname, addr, phone } = market;
+  const { name, subname, addr, phone, img_main } = market;
+
+  console.log(market);
+
   return (
     <StyledDetailContainer locY={locY}>
       <div className="bl-container main">
-        <div className="img item"></div>
+        <img src={img_main} className="img item" />
         <StyledFont className="name item" color={COLOR[0]} fw={600}>
           {name}
         </StyledFont>
@@ -53,7 +56,7 @@ export default function Detail({ locY, restaurant_id }) {
 
       <StyledGrid className="bl-container" locY={locY}>
         {market['snack'] &&
-          market['snack'].map((snack, idx) => <FoodComponent key={idx} image={snack.img} name={snack.name} />)}
+          market['snack'].map((snack, idx) => <FoodComponent key={idx} image={snack.image} name={snack.name} />)}
       </StyledGrid>
     </StyledDetailContainer>
   );
