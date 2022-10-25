@@ -55,7 +55,7 @@ const ButtonStyled = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: ${getWidthPixel(16)};
+  font-size: ${getWidthPixel(14)};
 `;
 
 const moveLeft = keyframes`
