@@ -4,10 +4,11 @@ import styled, { keyframes } from 'styled-components';
 import Restaurant from '../../Assets/icon/Restaurant.svg';
 import Cheer from '../../Assets/icon/Cheer.svg';
 import Toilet from '../../Assets/icon/Toilet.svg';
+import Restaurant_map_gray from '../../Assets/icon/Restaurant_map_gray.svg';
 import { WIDTH } from '../../utils/responsive';
 import { data } from '../../data/data';
 
-export default function MapContainer({ setSelected }) {
+export default function MapContainer({ selected, setSelected }) {
   const { datas } = data;
   const SIZE = 27;
 
@@ -17,14 +18,25 @@ export default function MapContainer({ setSelected }) {
         const { id, position, type } = data;
 
         if (type === 'restaurant') {
-          return (
-            <MapMarker
-              onClick={() => setSelected(id)}
-              key={id}
-              position={position}
-              image={{ src: Restaurant, size: { width: SIZE, height: SIZE } }}
-            />
-          );
+          if (selected === -1 || selected === id) {
+            return (
+              <MapMarker
+                onClick={() => setSelected(id)}
+                key={id}
+                position={position}
+                image={{ src: Restaurant, size: { width: SIZE, height: SIZE } }}
+              />
+            );
+          } else {
+            return (
+              <MapMarker
+                onClick={() => setSelected(id)}
+                key={id}
+                position={position}
+                image={{ src: Restaurant_map_gray, size: { width: SIZE, height: SIZE } }}
+              />
+            );
+          }
         } else if (type === 'cheer') {
           return <MapMarker key={id} position={position} image={{ src: Cheer, size: { width: SIZE, height: SIZE } }} />;
         } else {

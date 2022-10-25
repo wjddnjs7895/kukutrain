@@ -68,29 +68,29 @@ export const data = {
       snack: [
         {
           name: '치킨',
-          image: null,
+          image: require('../Assets/image/쪼끼쪼끼/chicken.jpeg'),
         },
         {
           name: '소세지',
-          image: null,
+          image: require('../Assets/image/쪼끼쪼끼/sausage.jpeg'),
         },
         {
           name: '홍어무침',
-          image: null,
+          image: require('../Assets/image/쪼끼쪼끼/muchim.jpeg'),
         },
       ],
       train: [
         {
           name: '치킨',
-          image: null,
+          image: require('../Assets/image/쪼끼쪼끼/chicken.jpeg'),
         },
         {
           name: '소세지',
-          image: null,
+          image: require('../Assets/image/쪼끼쪼끼/sausage.jpeg'),
         },
         {
-          name: '생맥주',
-          image: null,
+          name: '홍어무침',
+          image: require('../Assets/image/쪼끼쪼끼/muchim.jpeg'),
         },
       ],
       position: {
@@ -112,15 +112,15 @@ export const data = {
       snack: [
         {
           name: '김치떡볶이',
-          image: null,
+          image: require('../Assets/image/유자유/kimchitteokbokki.jpeg'),
         },
         {
           name: '치킨반마리',
-          image: null,
+          image: require('../Assets/image/유자유/chicken.jpeg'),
         },
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/유자유/tang.jpeg'),
         },
       ],
       train: null,
@@ -143,7 +143,7 @@ export const data = {
       snack: [
         {
           name: '후라이드치킨',
-          iamge: null,
+          iamge: require('../Assets/image/삼성통닭/chicken.jpeg'),
         },
       ],
       train: null,
@@ -184,15 +184,15 @@ export const data = {
       snack: [
         {
           name: '찢어진만둣국',
-          image: null,
+          image: require('../Assets/image/춘자1층/mandu.jpeg'),
         },
         {
           name: '닭강정',
-          image: null,
+          image: require('../Assets/image/춘자1층/gangjung.jpeg'),
         },
         {
           name: '김치삼겹비빔면',
-          image: null,
+          image: require('../Assets/image/춘자1층/gimsambee.jpeg'),
         },
       ],
       train: [
@@ -238,7 +238,7 @@ export const data = {
       snack: [
         {
           name: '마른 안주 (잠정)',
-          image: null,
+          image: require('../Assets/image/꼬꼬아찌/anju.jpeg'),
         },
       ],
       train: null,
@@ -261,15 +261,15 @@ export const data = {
       snack: [
         {
           name: '순살치킨',
-          image: null,
+          image: require('../Assets/image/역전할머니맥주/chicken.jpeg'),
         },
         {
           name: '짜파구리',
-          image: null,
+          image: require('../Assets/image/역전할머니맥주/zzapaguri.jpeg'),
         },
         {
           name: '염통꼬치',
-          image: null,
+          image: require('../Assets/image/역전할머니맥주/yeomtong.jpeg'),
         },
       ],
       train: null,
@@ -328,11 +328,11 @@ export const data = {
       snack: [
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/88왕대포/odeng.jpeg'),
         },
         {
           name: '두부김치',
-          image: null,
+          image: require('../Assets/image/88왕대포/dubukimchi.jpeg'),
         },
       ],
       train: [
@@ -364,11 +364,11 @@ export const data = {
       snack: [
         {
           name: '두부김치',
-          image: null,
+          image: require('../Assets/image/막걸리집/dubukimchi.jpeg'),
         },
         {
           name: '고추장돼지불고기',
-          image: null,
+          image: require('../Assets/image/막걸리집/bulgogi.jpeg'),
         },
       ],
       train: null,
@@ -409,23 +409,15 @@ export const data = {
       snack: [
         {
           name: '도토리묵무침',
-          image: null,
+          image: require('../Assets/image/한잔의추억/dotori.jpeg'),
         },
         {
           name: '부추전',
-          image: null,
+          image: require('../Assets/image/한잔의추억/buchujun.jpeg'),
         },
         {
-          name: '계란찜',
-          image: null,
-        },
-        {
-          name: '주먹밥',
-          image: null,
-        },
-        {
-          name: '콩나물국',
-          image: null,
+          name: '주먹밥+계란찜',
+          image: require('../Assets/image/한잔의추억/rockbab+gyeran+tang.jpeg'),
         },
       ],
       train: [
@@ -457,29 +449,29 @@ export const data = {
       snack: [
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/쿠마/odeng.jpeg'),
         },
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/쿠마/zeyuk.jpeg'),
         },
         {
           name: '치킨가라아게',
-          image: null,
+          image: require('../Assets/image/쿠마/chicken.jpeg'),
         },
       ],
       train: [
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/쿠마/odeng.jpeg'),
         },
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/쿠마/zeyuk.jpeg'),
         },
         {
           name: '치킨가라아게',
-          image: null,
+          image: require('../Assets/image/쿠마/chicken.jpeg'),
         },
       ],
       position: {
@@ -501,15 +493,15 @@ export const data = {
       snack: [
         {
           name: '고갈비',
-          image: null,
+          image: require('../Assets/image/안암꼬치/gogalbee.jpeg'),
         },
         {
           name: '오징어무침',
-          image: null,
+          image: require('../Assets/image/안암꼬치/ozing.jpeg'),
         },
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/안암꼬치/zeyuk.jpeg'),
         },
       ],
       train: null,
@@ -532,11 +524,11 @@ export const data = {
       snack: [
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/박군포차/odeng.jpeg'),
         },
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/박군포차/zeyuk.jpeg'),
         },
       ],
       train: [
@@ -568,13 +560,13 @@ export const data = {
       snack: [
         {
           name: '모듬전',
-          image: null,
+          image: require('../Assets/image/땡전집/jeon.jpeg'),
         },
       ],
       train: [
         {
           name: '모듬전',
-          image: null,
+          image: require('../Assets/image/땡전집/jeon.jpeg'),
         },
       ],
       position: {
@@ -596,15 +588,11 @@ export const data = {
       snack: [
         {
           name: '한우++ 미역국',
-          image: null,
-        },
-        {
-          name: '잡채 (잠정)',
-          image: null,
+          image: require('../Assets/image/늘,안암/miyuk.jpeg'),
         },
         {
           name: '백순대 (잠정)',
-          image: null,
+          image: require('../Assets/image/늘,안암/baeksundae.jpeg'),
         },
       ],
       train: [
@@ -643,16 +631,16 @@ export const data = {
       drink: ['소주', '맥주'],
       snack: [
         {
-          name: '찢어진만둣국',
-          image: null,
+          name: '돼지불고기',
+          image: require('../Assets/image/춘자지하/bulgogi.jpeg'),
         },
         {
-          name: '돼지불고기',
-          image: null,
+          name: '찢어진만둣국',
+          image: require('../Assets/image/춘자지하/mandu.jpeg'),
         },
         {
           name: '김치삼겹비빔면',
-          image: null,
+          image: require('../Assets/image/춘자지하/gimsambee.jpeg'),
         },
       ],
       train: null,
@@ -674,12 +662,16 @@ export const data = {
       drink: ['맥주'],
       snack: [
         {
-          name: 'A세트(마라샹궈, 꿔바로우)',
-          image: null,
+          name: '마라탕',
+          image: require('../Assets/image/신룽푸마라탕/maratang.jpeg'),
         },
         {
-          name: 'B세트(마라샹궈, 마라탕)',
-          image: null,
+          name: '마라샹궈',
+          image: require('../Assets/image/신룽푸마라탕/shanguo.jpeg'),
+        },
+        {
+          name: '탕수육',
+          image: require('../Assets/image/신룽푸마라탕/tangsuyuk.jpeg'),
         },
       ],
       train: null,
@@ -701,38 +693,30 @@ export const data = {
       drink: ['소주', '맥주', '막걸리'],
       snack: [
         {
-          name: '골뱅이 (잠정)',
-          image: null,
-        },
-        {
-          name: '회무침 (잠정)',
-          image: null,
+          name: '골뱅이',
+          image: require('../Assets/image/오징어나라/golbaengee.jpeg'),
         },
         {
           name: '김치부침개',
-          image: null,
+          image: require('../Assets/image/오징어나라/kimchibuchimgae.jpeg'),
         },
         {
           name: '튀김',
-          image: null,
+          image: require('../Assets/image/오징어나라/tuigim.jpeg'),
         },
       ],
       train: [
         {
-          name: '골뱅이 (잠정)',
-          image: null,
-        },
-        {
-          name: '회무침 (잠정)',
-          image: null,
+          name: '골뱅이',
+          image: require('../Assets/image/오징어나라/golbaengee.jpeg'),
         },
         {
           name: '김치부침개',
-          image: null,
+          image: require('../Assets/image/오징어나라/kimchibuchimgae.jpeg'),
         },
         {
           name: '튀김',
-          image: null,
+          image: require('../Assets/image/오징어나라/tuigim.jpeg'),
         },
       ],
       position: {
@@ -772,11 +756,11 @@ export const data = {
       snack: [
         {
           name: '윙',
-          image: null,
+          image: require('../Assets/image/영철버거/wing.jpeg'),
         },
         {
           name: '모듬안주',
-          image: null,
+          image: require('../Assets/image/영철버거/everyanju.jpeg'),
         },
       ],
       train: null,
