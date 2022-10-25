@@ -51,6 +51,7 @@ const ButtonStyled = styled.button`
     color: ${buttonColor};
   `}
   display: flex;
+  background-color: ${palette.gray_03};
   margin-top: ${getHeightPixel(21)};
   flex-direction: row;
   justify-content: center;

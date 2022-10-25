@@ -10,6 +10,7 @@ export const palette = {
   pink: '#DF8383',
   gray: '#BABABA',
   gray_02: '#DEDEDE',
+  gray_03: '#FAFAFA',
   light_gray: '#ECECEC',
   dark_gray: '#6A6A6A',
   crimson: '#BC323B',
