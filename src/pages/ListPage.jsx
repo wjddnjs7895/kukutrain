@@ -10,6 +10,7 @@ import { TYPE__LIST } from '../constants';
 export default function ListPage({ setSelected, selectedIdx }) {
   return (
     <PageStyled>
+      <Blank height={getHeightPixel(10)} />
       {data.datas.map(store => {
         if (store.type === TYPE__LIST[selectedIdx]) {
           return (
