@@ -7,14 +7,44 @@ import Toilet from '../../Assets/icon/Toilet.svg';
 import Restaurant_map_gray from '../../Assets/icon/Restaurant_map_gray.svg';
 import { WIDTH } from '../../utils/responsive';
 import { data } from '../../data/data';
+import { FILTER__LIST, FILTER__TYPE__LIST } from '../../constants';
 
-export default function MapContainer({ selected, setSelected }) {
+export default function MapContainer({ selected, setSelected, alcoholIdx, foodIdx, noiseIdx }) {
   const { datas } = data;
   const SIZE = 27;
 
+  const filterIdx = {
+    alcohol: alcoholIdx,
+    food: foodIdx,
+    noise: noiseIdx,
+  };
+
+  let filtered_datas =
+    alcoholIdx === [] && foodIdx === [] && noiseIdx !== []
+      ? datas
+      : datas.filter(data => {
+          let flag = true;
+
+          for (const type of FILTER__TYPE__LIST) {
+            const list = filterIdx[type];
+            if (list.length === 0 || !data[type]) continue;
+
+            const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
+            if (type === 'noise') {
+              if (!filterList.includes(data[type])) flag = false;
+            } else {
+              for (const filter of data[type]) {
+                if (!filterList.includes(filter)) flag = false;
+              }
+            }
+          }
+
+          return flag;
+        });
+
   return (
     <StyledMap center={{ lat: 37.5843918209331, lng: 127.02957798348103 }}>
-      {datas.map(data => {
+      {filtered_datas.map(data => {
         const { id, position, type } = data;
 
         if (type === 'restaurant') {

@@ -23,7 +23,13 @@ function MainPage() {
 
   return (
     <PageStyled>
-      <MapContainer selected={selected} setSelected={setSelected} />
+      <MapContainer
+        selected={selected}
+        setSelected={setSelected}
+        alcoholIdx={alcoholIdx}
+        foodIdx={foodIdx}
+        noiseIdx={noiseIdx}
+      />
       <BottomContainer
         locY={locY}
         setLocY={setLocY}
