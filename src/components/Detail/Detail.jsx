@@ -21,8 +21,6 @@ export default function Detail({ locY, restaurant_id }) {
   const market = data['datas'].find(data => data.id === restaurant_id);
   const { name, subname, addr, phone, img_main } = market;
 
-  console.log(market);
-
   return (
     <StyledDetailContainer locY={locY}>
       <div className="bl-container main">
@@ -89,7 +87,7 @@ const StyledDetailContainer = styled.div`
 
     .img {
       width: 100%;
-      height: ${getHeightPixel(150)};
+      height: ${getHeightPixel(200)};
 
       border: 1px solid black;
       border-radius: 1.25rem;
