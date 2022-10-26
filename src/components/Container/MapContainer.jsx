@@ -9,9 +9,11 @@ import { WIDTH } from '../../utils/responsive';
 import { data } from '../../data/data';
 import { FILTER__LIST, FILTER__TYPE__LIST } from '../../constants';
 
+const CENTER = { lat: 37.5843918209331, lng: 127.02957798348103 };
+const SIZE = 27;
+
 export default function MapContainer({ selected, setSelected, alcoholIdx, foodIdx, noiseIdx }) {
   const { datas } = data;
-  const SIZE = 27;
 
   const filterIdx = {
     alcohol: alcoholIdx,
@@ -42,8 +44,11 @@ export default function MapContainer({ selected, setSelected, alcoholIdx, foodId
           return flag;
         });
 
+  const selectedData = selected === -1 ? null : datas.find(data => data.id === selected);
+  const centerPos = selectedData ? selectedData.position : CENTER;
+
   return (
-    <StyledMap center={{ lat: 37.5843918209331, lng: 127.02957798348103 }}>
+    <StyledMap center={centerPos} isPanto={true}>
       {filtered_datas.map(data => {
         const { id, position, type } = data;
 
