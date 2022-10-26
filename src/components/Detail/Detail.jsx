@@ -19,7 +19,7 @@ export default function Detail({ locY, restaurant_id }) {
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
   const market = data['datas'].find(data => data.id === restaurant_id);
-  const { name, subname, addr, phone, img_main } = market;
+  const { name, subname, addr, phone, time, img_main } = market;
 
   return (
     <StyledDetailContainer locY={locY}>
@@ -45,7 +45,12 @@ export default function Detail({ locY, restaurant_id }) {
         <div className="contact bl-item">
           <Call className="call item-icon" width={ICON_SIZE} height={ICON_SIZE} />
           <StyledFont className="number item-text" color={COLOR[2]}>
-            {phone}
+            {phone || '미제공'}
+          </StyledFont>
+        </div>
+        <div className="time bl-item">
+          <StyledFont className="tm item-text" color={COLOR[2]}>
+            {time ? time.split('~').join(' ~ ') : '미제공'}
           </StyledFont>
         </div>
       </div>
