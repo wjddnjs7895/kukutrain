@@ -5,7 +5,7 @@ import { getWidthPixel } from '../../utils/responsive';
 export default function FilterButton({ text, idx, idxList, setIdx, isSelected }) {
   return (
     <ButtonStyled
-      backgroundColor={isSelected ? '#C56A6A' : '#dcdcdc80'}
+      backgroundColor={isSelected ? '#BF3535' : '#dcdcdc80'}
       onClick={() => {
         if (isSelected) {
           let filtered = idxList.filter(element => element !== idx);
@@ -26,7 +26,7 @@ const ButtonStyled = styled.button`
     background-color: ${backgroundColor};
   `}
   color: white;
-  font-size: ${getWidthPixel(14)};
+  font-size: ${getWidthPixel(12)};
   width: ${getWidthPixel(77)};
   height: ${getWidthPixel(27)};
   border-radius: ${getWidthPixel(15)};

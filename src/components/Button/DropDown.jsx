@@ -75,7 +75,7 @@ const ButtonStyled = styled.button`
   color: white;
   width: ${getWidthPixel(105)};
   height: ${getHeightPixel(36)};
-  font-size: ${getWidthPixel(14)};
+  font-size: ${getWidthPixel(13)};
   background-color: ${palette.none};
   border: 0px;
 `;

@@ -31,7 +31,7 @@ export default function FilterDropDown({ text, isVisible, setVisible, setType })
 const ButtonStyled = styled.button`
   background-color: #7d7f8080;
   color: white;
-  font-size: ${getWidthPixel(14)};
+  font-size: ${getWidthPixel(13)};
   width: ${getWidthPixel(105)};
   height: ${getWidthPixel(31)};
   border-radius: ${getWidthPixel(15)};

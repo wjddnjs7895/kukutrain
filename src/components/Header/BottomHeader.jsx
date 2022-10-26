@@ -92,7 +92,6 @@ export function BottomHeader({
             />
           ) : (
             <BottomSubOffContainer isVisible={isToggle}>
-              <BottomSubOff />
               <TrainIconStyled />
             </BottomSubOffContainer>
           )}
@@ -121,7 +120,7 @@ export function BottomHeader({
             }}
           >
             <HeaderBox>
-              <StyledHeaderElement />
+              <BottomHeaderElement />
             </HeaderBox>
             <RowContainerStyled>
               <MarginStyled>
@@ -204,6 +203,7 @@ export function BottomHeader({
 const ContainerStyled = styled.div`
   width: ${getWidthPixel(428)};
   height: ${getHeightPixel(86)};
+  filter: drop-shadow(0px -10px 10px #0000001a);
   background-color: #ffffff00;
 `;
 
@@ -213,10 +213,6 @@ const RowContainerStyled = styled.div`
   flex-direction: row;
   position: absolute;
   justify-content: center;
-`;
-
-const StyledHeaderElement = styled(BottomHeaderElement)`
-  filter: drop-shadow(0px -10px 10px #0000001a);
 `;
 
 const HeaderBox = styled.div`
@@ -358,18 +354,6 @@ const ChopStickRightIconStyled = styled(ChopStickRightIcon)`
   `}
   width: ${getWidthPixel(7)};
   height: ${getWidthPixel(34)};
-`;
-
-const BottomSubOff = styled.div`
-  width: ${getWidthPixel(98)};
-  height: ${getHeightPixel(6)};
-  background-color: #9f9f9f;
-  border-radius: ${getHeightPixel(3)};
-  margin-top: -${getHeightPixel(24)};
-  position: absolute;
-  ${({ isVisible }) => css`
-    animation: ${isVisible ? fadeOut : fadeIn} 0.5s linear;
-  `}
 `;
 
 const BottomSubOffContainer = styled.div`
