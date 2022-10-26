@@ -10,7 +10,7 @@ export default function BackHeader({ setSelected }) {
       <ButtonStyled onClick={() => setSelected(-1)}>
         <IconStyled />
       </ButtonStyled>
-      <div className="info-text">가게 상세 정보</div>
+      <div className="info-text">식당 정보</div>
     </ContainerStyled>
   );
 }

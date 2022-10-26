@@ -22,21 +22,23 @@ export default function MapContainer({ selected, setSelected, alcoholIdx, foodId
   };
 
   let filtered_datas =
-    alcoholIdx === [] && foodIdx === [] && noiseIdx !== []
+    alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
       ? datas
       : datas.filter(data => {
-          let flag = true;
+          let flag = false;
 
           for (const type of FILTER__TYPE__LIST) {
-            const list = filterIdx[type];
-            if (list.length === 0 || !data[type]) continue;
+            const list = filterIdx[type]; // Idx
+            if (list.length === 0) continue;
+
+            if (!data[type]) return false;
 
             const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
             if (type === 'noise') {
-              if (!filterList.includes(data[type])) flag = false;
+              if (filterList.includes(data[type])) flag = true;
             } else {
               for (const filter of data[type]) {
-                if (!filterList.includes(filter)) flag = false;
+                if (filterList.includes(filter)) flag = true;
               }
             }
           }
