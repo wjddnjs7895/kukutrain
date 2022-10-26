@@ -10,9 +10,11 @@ export const data = {
       phone: '02-953-5592',
       img_main: require('../Assets/image/맛닭꼬/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.5849053919386,
         lng: 127.029558373541,
@@ -28,9 +30,11 @@ export const data = {
       phone: '02-953-1092',
       img_main: require('../Assets/image/홍도야빈대떡/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5866114720508,
         lng: 127.034365259234,
@@ -46,9 +50,11 @@ export const data = {
       phone: '02-923-1068',
       img_main: require('../Assets/image/충주집/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5861969550511,
         lng: 127.034571694972,
@@ -64,7 +70,8 @@ export const data = {
       phone: '02-922-6887',
       img_main: require('../Assets/image/쪼끼쪼끼/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '치킨',
@@ -93,6 +100,7 @@ export const data = {
           image: require('../Assets/image/쪼끼쪼끼/muchim.jpeg'),
         },
       ],
+      noise: '적당해요',
       position: {
         lat: 37.5859550117617,
         lng: 127.029705973956,
@@ -108,7 +116,8 @@ export const data = {
       phone: '0507-1393-7777',
       img_main: require('../Assets/image/유자유/main.jpeg'),
       time: '6:30~9:30',
-      drink: ['막걸리'],
+      alcohol: ['막걸리'],
+      food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '김치떡볶이',
@@ -124,6 +133,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5839751864072,
         lng: 127.029277794839,
@@ -139,7 +149,8 @@ export const data = {
       phone: '02-927-1331',
       img_main: require('../Assets/image/삼성통닭/main.jpeg'),
       time: '7:00~9:00',
-      drink: ['맥주'],
+      alcohol: ['맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '후라이드치킨',
@@ -147,6 +158,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '활기차요',
       position: {
         lat: 37.5861014756254,
         lng: 127.029496575624,
@@ -162,9 +174,11 @@ export const data = {
       phone: '02-816-9438',
       img_main: require('../Assets/image/산적/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '활기차요',
       position: {
         lat: 37.5840515578857,
         lng: 127.030124119161,
@@ -180,7 +194,8 @@ export const data = {
       phone: '0507-1309-2810',
       img_main: require('../Assets/image/춘자1층/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '찢어진만둣국',
@@ -201,6 +216,7 @@ export const data = {
           image: null,
         },
       ],
+      noise: '활기차요',
       position: {
         lat: 37.584328556723,
         lng: 127.030345004053,
@@ -216,9 +232,11 @@ export const data = {
       phone: '02-953-7288',
       img_main: require('../Assets/image/별난주점/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.5859280288415,
         lng: 127.029519151081,
@@ -234,7 +252,8 @@ export const data = {
       phone: '02-922-2654',
       img_main: require('../Assets/image/꼬꼬아찌/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '마른 안주 (잠정)',
@@ -242,6 +261,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5840944126284,
         lng: 127.029897703012,
@@ -257,7 +277,8 @@ export const data = {
       phone: '02-929-1226',
       img_main: require('../Assets/image/역전할머니맥주/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '아이셔에 이슬', '맥주'],
+      alcohol: ['소주', '아이셔에 이슬', '맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '순살치킨',
@@ -273,6 +294,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '활기차요',
       position: {
         lat: 37.5856578112291,
         lng: 127.029196370008,
@@ -288,9 +310,11 @@ export const data = {
       phone: '02-953-3451',
       img_main: require('../Assets/image/서서갈비/main.jpeg'),
       time: '6:30~9:30',
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5836236336514,
         lng: 127.029937140336,
@@ -306,9 +330,11 @@ export const data = {
       phone: '02-922-0623',
       img_main: require('../Assets/image/삼파전/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5858265910161,
         lng: 127.029821972738,
@@ -324,7 +350,8 @@ export const data = {
       phone: '02-922-4085',
       img_main: require('../Assets/image/88왕대포/main.jpeg'),
       time: '6:30~9:30',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주', '국물/탕류', '전류'],
       snack: [
         {
           name: '오뎅탕',
@@ -345,6 +372,7 @@ export const data = {
           image: null,
         },
       ],
+      noise: '적당해요',
       position: {
         lat: 37.584143885084,
         lng: 127.03022039063,
@@ -360,7 +388,8 @@ export const data = {
       phone: '0507-1369-0588',
       img_main: require('../Assets/image/막걸리집/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '막걸리'],
+      alcohol: ['소주', '막걸리'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '두부김치',
@@ -372,6 +401,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.585506739252,
         lng: 127.029819014666,
@@ -387,9 +417,11 @@ export const data = {
       phone: '010-9431-1452',
       img_main: require('../Assets/image/38포차/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.5845493327027,
         lng: 127.030217724097,
@@ -405,7 +437,8 @@ export const data = {
       phone: '02-3291-4848',
       img_main: require('../Assets/image/한잔의추억/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['막걸리'],
+      alcohol: ['막걸리'],
+      food: ['마른 안주', '국물/탕류', '전류'],
       snack: [
         {
           name: '도토리묵무침',
@@ -430,6 +463,7 @@ export const data = {
           image: null,
         },
       ],
+      noise: '활기차요',
       position: {
         lat: 37.5849413597274,
         lng: 127.029844263191,
@@ -445,7 +479,8 @@ export const data = {
       phone: '02-922-3222',
       img_main: require('../Assets/image/쿠마/main.jpeg'),
       time: '6:45~9:45',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '오뎅탕',
@@ -474,6 +509,7 @@ export const data = {
           image: require('../Assets/image/쿠마/chicken.jpeg'),
         },
       ],
+      noise: '적당해요',
       position: {
         lat: 37.5857634655302,
         lng: 127.030042725066,
@@ -489,7 +525,8 @@ export const data = {
       phone: '02-925-9417',
       img_main: require('../Assets/image/안암꼬치/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '고갈비',
@@ -505,6 +542,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '활기차요',
       position: {
         lat: 37.5835965534407,
         lng: 127.030135257412,
@@ -520,7 +558,8 @@ export const data = {
       phone: null,
       img_main: require('../Assets/image/박군포차/main.jpeg'),
       time: '6:00~9:00',
-      drink: ['소주', '막걸리'],
+      alcohol: ['소주', '막걸리'],
+      food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '오뎅탕',
@@ -541,6 +580,7 @@ export const data = {
           image: null,
         },
       ],
+      noise: '활기차요',
       position: {
         lat: 37.584689075952,
         lng: 127.029866805995,
@@ -556,7 +596,8 @@ export const data = {
       phone: '02-929-8295',
       img_main: require('../Assets/image/땡전집/main.jpeg'),
       time: '6:00~9:00',
-      drink: ['막걸리', '소주'],
+      alcohol: ['막걸리', '소주'],
+      food: ['전류'],
       snack: [
         {
           name: '모듬전',
@@ -569,6 +610,7 @@ export const data = {
           image: require('../Assets/image/땡전집/jeon.jpeg'),
         },
       ],
+      noise: '활기차요',
       position: {
         lat: 37.5851712617261,
         lng: 127.029249958691,
@@ -584,7 +626,8 @@ export const data = {
       phone: '0507-1329-1748',
       img_main: require('../Assets/image/늘,안암/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['막걸리', '소주', '맥주'],
+      alcohol: ['막걸리', '소주', '맥주'],
+      food: ['국물/탕류'],
       snack: [
         {
           name: '한우++ 미역국',
@@ -613,6 +656,7 @@ export const data = {
           image: null,
         },
       ],
+      noise: '조용해요',
       position: {
         lat: 37.5853354244257,
         lng: 127.030314277653,
@@ -628,7 +672,8 @@ export const data = {
       phone: '0507-1309-2810',
       img_main: require('../Assets/image/춘자지하/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['소주', '맥주'],
+      alcohol: ['소주', '맥주'],
+      food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '돼지불고기',
@@ -644,6 +689,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '활기차요',
       position: {
         lat: 37.5846373458009,
         lng: 127.029561097995,
@@ -659,7 +705,8 @@ export const data = {
       phone: '02-6404-2014',
       img_main: require('../Assets/image/신룽푸마라탕/main.jpeg'),
       time: '7:00~10:00',
-      drink: ['맥주'],
+      alcohol: ['맥주'],
+      food: ['국물/탕류'],
       snack: [
         {
           name: '마라탕',
@@ -675,6 +722,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '조용해요',
       position: {
         lat: 37.5846486110489,
         lng: 127.029549780694,
@@ -690,7 +738,8 @@ export const data = {
       phone: '02-924-5484',
       img_main: require('../Assets/image/오징어나라/main.jpeg'),
       time: '7:00~9:30',
-      drink: ['소주', '맥주', '막걸리'],
+      alcohol: ['소주', '맥주', '막걸리'],
+      food: ['마른 안주', '전류'],
       snack: [
         {
           name: '골뱅이',
@@ -719,6 +768,7 @@ export const data = {
           image: require('../Assets/image/오징어나라/tuigim.jpeg'),
         },
       ],
+      noise: '적당해요',
       position: {
         lat: 37.5851576323178,
         lng: 127.02970848755,
@@ -734,9 +784,11 @@ export const data = {
       phone: '02-926-3392',
       img_main: require('../Assets/image/참숯불3392/main.jpeg'),
       time: null,
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.584049259762,
         lng: 127.030302434443,
@@ -752,7 +804,8 @@ export const data = {
       phone: '02-922-1668 ',
       img_main: require('../Assets/image/영철버거/main.jpeg'),
       time: '7:00~11:30',
-      drink: ['맥주'],
+      alcohol: ['맥주'],
+      food: ['마른 안주'],
       snack: [
         {
           name: '윙',
@@ -764,6 +817,7 @@ export const data = {
         },
       ],
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.5831306249976,
         lng: 127.028790638516,
@@ -778,9 +832,11 @@ export const data = {
       addr: null,
       phone: null,
       time: '7:00 ~ 8:00',
-      drink: null,
+      alcohol: null,
+      food: [],
       snack: null,
       train: null,
+      noise: '적당해요',
       position: {
         lat: 37.58365528098375,
         lng: 127.02948994963714,
