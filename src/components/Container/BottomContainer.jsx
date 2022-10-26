@@ -10,7 +10,7 @@ export default function BottomContainer({
   setLocY,
   selected,
   setSelected,
-  alcoholdIdx,
+  alcoholIdx,
   setAlcoholIdx,
   foodIdx,
   setFoodIdx,
@@ -27,7 +27,7 @@ export default function BottomContainer({
         setSelected={setSelected}
         selectedIdx={selectedIdx}
         setIdx={setIdx}
-        alcoholIdx={alcoholdIdx}
+        alcoholIdx={alcoholIdx}
         setAlcoholIdx={setAlcoholIdx}
         foodIdx={foodIdx}
         setFoodIdx={setFoodIdx}

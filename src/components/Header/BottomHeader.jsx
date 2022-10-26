@@ -15,6 +15,7 @@ import { ReactComponent as CheerGrayIcon } from '../../Assets/icon/cheer_gray.sv
 import { ReactComponent as SpoonIcon } from '../../Assets/icon/spoon_icon.svg';
 import { ReactComponent as ChopStickLeftIcon } from '../../Assets/icon/chopstick1_icon.svg';
 import { ReactComponent as ChopStickRightIcon } from '../../Assets/icon/chopstick2_icon.svg';
+import { ReactComponent as TrainIcon } from '../../Assets/icon/train.svg';
 import BottomSubContainer from '../Container/BottomSubContainer';
 import BackHeader from './BackHeader';
 
@@ -90,8 +91,9 @@ export function BottomHeader({
               isToggle={isToggle}
             />
           ) : (
-            <BottomSubOffContainer>
+            <BottomSubOffContainer isVisible={isToggle}>
               <BottomSubOff />
+              <TrainIconStyled />
             </BottomSubOffContainer>
           )}
           <div
@@ -153,44 +155,47 @@ export function BottomHeader({
           </div>
         </div>
       ) : (
-        <HeaderStyled
-          onTouchStart={e => {
-            setScroll(true);
-          }}
-          onTouchEnd={e => {
-            setScroll(false);
-          }}
-          onTouchMove={e => {
-            if (isScroll) {
-              setLocY(e.touches[0].pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
-            }
-          }}
-          onMouseDown={() => {
-            setScroll(true);
-          }}
-          onMouseUp={() => {
-            setScroll(false);
-          }}
-          onMouseMove={e => {
-            if (isScroll) {
-              setLocY(e.pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
-            }
-          }}
-        >
-          <Blank width={getWidthPixel(30)} />
-          <Button text={'화장실'} idx={0} isSelected={selectedIdx === 0} onClick={() => setIdx(0)}>
-            {selectedIdx === 0 ? <ToiletCrimsonIconStyled /> : <ToiletGrayIconStyled />}
-          </Button>
-          <Blank width={getWidthPixel(22)} />
-          <Button text={'뒤풀이'} idx={1} isSelected={selectedIdx === 1} onClick={() => setIdx(1)}>
-            <RestaurantIconStyled />
-          </Button>
-          <Blank width={getWidthPixel(22)} />
-          <Button text={'응원단'} idx={2} isSelected={selectedIdx === 2} onClick={() => setIdx(2)}>
-            {selectedIdx === 2 ? <CheerCrimsonIconStyled /> : <CheerGrayIconStyled />}
-          </Button>
-          <Blank width={getWidthPixel(30)} />
-        </HeaderStyled>
+        <div>
+          <TrainSideIconStyled />
+          <HeaderStyled
+            onTouchStart={e => {
+              setScroll(true);
+            }}
+            onTouchEnd={e => {
+              setScroll(false);
+            }}
+            onTouchMove={e => {
+              if (isScroll) {
+                setLocY(e.touches[0].pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
+              }
+            }}
+            onMouseDown={() => {
+              setScroll(true);
+            }}
+            onMouseUp={() => {
+              setScroll(false);
+            }}
+            onMouseMove={e => {
+              if (isScroll) {
+                setLocY(e.pageY - getPixelToNumber(getHeightPixel(SCROLL__OFFSET__Y)));
+              }
+            }}
+          >
+            <Blank width={getWidthPixel(30)} />
+            <Button text={'화장실'} idx={0} isSelected={selectedIdx === 0} onClick={() => setIdx(0)}>
+              {selectedIdx === 0 ? <ToiletCrimsonIconStyled /> : <ToiletGrayIconStyled />}
+            </Button>
+            <Blank width={getWidthPixel(22)} />
+            <Button text={'뒤풀이'} idx={1} isSelected={selectedIdx === 1} onClick={() => setIdx(1)}>
+              <RestaurantIconStyled />
+            </Button>
+            <Blank width={getWidthPixel(22)} />
+            <Button text={'응원단'} idx={2} isSelected={selectedIdx === 2} onClick={() => setIdx(2)}>
+              {selectedIdx === 2 ? <CheerCrimsonIconStyled /> : <CheerGrayIconStyled />}
+            </Button>
+            <Blank width={getWidthPixel(30)} />
+          </HeaderStyled>
+        </div>
       )}
     </ContainerStyled>
   );
@@ -362,6 +367,9 @@ const BottomSubOff = styled.div`
   border-radius: ${getHeightPixel(3)};
   margin-top: -${getHeightPixel(24)};
   position: absolute;
+  ${({ isVisible }) => css`
+    animation: ${isVisible ? fadeOut : fadeIn} 0.5s linear;
+  `}
 `;
 
 const BottomSubOffContainer = styled.div`
@@ -512,5 +520,39 @@ const fromSpoonLineRight = keyframes`
   }
   100% {
     opacity: 1;
+  }
+`;
+
+const TrainIconStyled = styled(TrainIcon)`
+  width: ${getWidthPixel(111)};
+  height: ${getWidthPixel(62)};
+  margin-left: ${getWidthPixel(251)};
+  margin-top: -${getWidthPixel(62)};
+  position: absolute;
+`;
+
+const TrainSideIconStyled = styled(TrainIcon)`
+  width: ${getWidthPixel(111)};
+  height: ${getWidthPixel(62)};
+  margin-left: ${getWidthPixel(284)};
+  margin-top: -${getWidthPixel(62)};
+  position: absolute;
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 `;

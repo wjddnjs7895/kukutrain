@@ -1,7 +1,7 @@
 export const FILTER__LIST = {
   alcohol: {
     title: '주류',
-    list: ['소주/맥주', '막걸리', '칵테일'],
+    list: ['소주', '맥주', '막걸리'],
   },
   food: {
     title: '안주류',
