@@ -17,11 +17,25 @@ function MainPage() {
       ? 305
       : 105;
   const [locY, setLocY] = useState(HEIGHT - getPixelToNumber(getHeightPixel(OFFSET__LOCY)));
+  const [alcoholIdx, setAlcoholIdx] = useState([]);
+  const [foodIdx, setFoodIdx] = useState([]);
+  const [noiseIdx, setNoiseIdx] = useState([]);
 
   return (
     <PageStyled>
       <MapContainer selected={selected} setSelected={setSelected} />
-      <BottomContainer locY={locY} setLocY={setLocY} selected={selected} setSelected={setSelected} />
+      <BottomContainer
+        locY={locY}
+        setLocY={setLocY}
+        selected={selected}
+        setSelected={setSelected}
+        alcoholIdx={alcoholIdx}
+        setAlcoholIdx={setAlcoholIdx}
+        foodIdx={foodIdx}
+        setFoodIdx={setFoodIdx}
+        noiseIdx={noiseIdx}
+        setNoiseIdx={setNoiseIdx}
+      />
     </PageStyled>
   );
 }

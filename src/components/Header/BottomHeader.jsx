@@ -18,14 +18,24 @@ import { ReactComponent as ChopStickRightIcon } from '../../Assets/icon/chopstic
 import BottomSubContainer from '../Container/BottomSubContainer';
 import BackHeader from './BackHeader';
 
-export function BottomHeader({ locY, setLocY, setSelected, selected, selectedIdx, setIdx }) {
+export function BottomHeader({
+  locY,
+  setLocY,
+  setSelected,
+  selected,
+  selectedIdx,
+  setIdx,
+  alcoholIdx,
+  setAlcoholIdx,
+  foodIdx,
+  setFoodIdx,
+  noiseIdx,
+  setNoiseIdx,
+}) {
   const SCROLL__OFFSET__Y = 40;
   const [isScroll, setScroll] = useState(false);
   const [isToggle, setToggle] = useState(false);
   const [flag, setFlag] = useState(false);
-  const [alcoholIdx, setAlcoholIdx] = useState([]);
-  const [foodIdx, setFoodIdx] = useState([]);
-  const [noiseIdx, setNoiseIdx] = useState([]);
   const [type, setType] = useState(-1);
   useEffect(() => {
     let timeoutId;
