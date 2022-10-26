@@ -6,19 +6,19 @@ import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
 import { ReactComponent as Clock } from '../../Assets/icon/Clock.svg';
 import { data } from '../../data/data';
 
+const ICON_SIZE = getWidthPixel(20);
+const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
+
 function FoodComponent({ image = '이미지 없음', name }) {
   return (
     <div className="item">
       <img className="item-img" src={image} alt="" />
-      <div className="name">{name}</div>
+      <div className="item-name">{name}</div>
     </div>
   );
 }
 
 export default function Detail({ locY, restaurant_id }) {
-  const ICON_SIZE = getWidthPixel(20);
-  const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
-
   const market = data['datas'].find(data => data.id === restaurant_id);
   const { name, subname, addr, phone, time, img_main } = market;
 
@@ -180,9 +180,11 @@ const StyledGrid = styled.div`
     border-bottom: 1px solid #e3e3e3;
   }
 
-  .name {
-    margin-top: 0.5em;
-    text-align: center;
+  .item-name {
+    height: ${getHeightPixel(30)};
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.5rem;
   }
 `;
