@@ -1,21 +1,22 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { getHeightPixel, getWidthPixel, HEIGHT } from '../../utils/responsive';
 import { ReactComponent as Marker } from '../../Assets/icon/Marker.svg';
 import { ReactComponent as Call } from '../../Assets/icon/Call.svg';
+import { ReactComponent as Clock } from '../../Assets/icon/Clock.svg';
 import { data } from '../../data/data';
 
 function FoodComponent({ image = '이미지 없음', name }) {
   return (
     <div className="item">
-      <img className="img" src={image} alt="" />
+      <img className="item-img" src={image} alt="" />
       <div className="name">{name}</div>
     </div>
   );
 }
 
 export default function Detail({ locY, restaurant_id }) {
-  const ICON_SIZE = getWidthPixel(24);
+  const ICON_SIZE = getWidthPixel(20);
   const COLOR = ['#424242', '#9a9a9a', '#696969', '#727272'];
 
   const market = data['datas'].find(data => data.id === restaurant_id);
@@ -33,7 +34,7 @@ export default function Detail({ locY, restaurant_id }) {
         </StyledFont>
       </div>
 
-      <div className="split"></div>
+      <div className="split split-first"></div>
 
       <div className="bl-container sub">
         <div className="pos bl-item">
@@ -42,13 +43,24 @@ export default function Detail({ locY, restaurant_id }) {
             {addr}
           </StyledFont>
         </div>
+      </div>
+
+      <div className="inner-split"></div>
+
+      <div className="bl-container sub">
         <div className="contact bl-item">
           <Call className="call item-icon" width={ICON_SIZE} height={ICON_SIZE} />
           <StyledFont className="number item-text" color={COLOR[2]}>
             {phone || '미제공'}
           </StyledFont>
         </div>
+      </div>
+
+      <div className="inner-split"></div>
+
+      <div className="bl-container sub">
         <div className="time bl-item">
+          <Clock className="clock item-icon" width={ICON_SIZE} height={ICON_SIZE} />
           <StyledFont className="tm item-text" color={COLOR[2]}>
             {time ? time.split('~').join(' ~ ') : '미제공'}
           </StyledFont>
@@ -72,8 +84,15 @@ const StyledDetailContainer = styled.div`
   overflow-y: auto;
 
   .split {
-    margin: 0.375em 0;
-    border: ${() => getHeightPixel(1.5)} solid #dedede;
+    border: ${getHeightPixel(1)} solid #dedede;
+  }
+
+  .split-first {
+    margin-top: ${getHeightPixel(12)};
+  }
+
+  .inner-split {
+    border: ${getHeightPixel(1)} solid #efefef;
   }
 
   .bl-container {
@@ -94,16 +113,18 @@ const StyledDetailContainer = styled.div`
       width: 100%;
       height: ${getHeightPixel(200)};
 
-      border: 1px solid black;
-      border-radius: 1.25rem;
+      border: 1px solid #e3e3e3;
     }
 
     .name {
-      font-weight: 600;
+      font-size: ${getWidthPixel(18)};
+      font-weight: 800;
     }
 
     .type {
-      font-size: 0.75rem;
+      font-size: ${getWidthPixel(14)};
+      font-weight: 500;
+      color: #bc323b;
     }
   }
 
@@ -119,8 +140,8 @@ const StyledDetailContainer = styled.div`
     }
 
     .item-text {
-      margin-left: 0.5em;
-      font-size: 0.75rem;
+      margin-left: ${getWidthPixel(18)};
+      font-size: ${getWidthPixel(12)};
     }
   }
 `;
@@ -140,16 +161,23 @@ const StyledGrid = styled.div`
   -webkit-overflow-scrolling: touch;
 
   .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: content-box;
+    width: ${getWidthPixel(104)};
     height: ${getHeightPixel(130)};
     margin-top: 1em;
+
+    border: 1px solid #e3e3e3;
   }
 
-  .img {
-    width: ${getWidthPixel(100)};
+  .item-img {
+    width: ${getWidthPixel(104)};
     height: ${getWidthPixel(100)};
 
-    border: 1px solid black;
-    border-radius: 0.75em;
+    border-bottom: 1px solid #e3e3e3;
   }
 
   .name {

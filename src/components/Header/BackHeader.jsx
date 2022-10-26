@@ -10,6 +10,7 @@ export default function BackHeader({ setSelected }) {
       <ButtonStyled onClick={() => setSelected(-1)}>
         <IconStyled />
       </ButtonStyled>
+      <div className="info-text">가게 상세 정보</div>
     </ContainerStyled>
   );
 }
@@ -22,6 +23,13 @@ const ContainerStyled = styled.div`
   display: flex;
   align-items: center;
   padding-left: ${getWidthPixel(20)};
+
+  .info-text {
+    width: ${getWidthPixel(300)};
+    text-align: center;
+    font-size: 14px;
+    color: #bc323b;
+  }
 `;
 
 const IconStyled = styled(BackIcon)`
