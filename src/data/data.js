@@ -981,7 +981,7 @@ export const data = {
         },
         {
           name: '귤',
-          image: null,
+          image: require('../Assets/image/고대인의먹거리집/gyul.jpeg'),
         },
       ],
       train: null,
