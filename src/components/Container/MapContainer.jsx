@@ -62,6 +62,9 @@ export default function MapContainer({ selected, setSelected, alcoholIdx, foodId
                 key={id}
                 position={position}
                 image={{ src: Restaurant, size: { width: SIZE, height: SIZE } }}
+                onCreate={maker => {
+                  maker.setZIndex(100);
+                }}
               />
             );
           } else {
@@ -71,6 +74,9 @@ export default function MapContainer({ selected, setSelected, alcoholIdx, foodId
                 key={id}
                 position={position}
                 image={{ src: Restaurant_map_gray, size: { width: SIZE, height: SIZE } }}
+                onCreate={maker => {
+                  maker.setZIndex(1);
+                }}
               />
             );
           }
