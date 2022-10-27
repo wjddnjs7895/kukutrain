@@ -5,13 +5,47 @@ import { palette } from '../constants/palette';
 import { getWidthPixel, getHeightPixel } from '../utils/responsive';
 import { data } from '../data/data';
 import Blank from '../components/Blank';
-import { TYPE__LIST } from '../constants';
+import { FILTER__LIST, FILTER__TYPE__LIST, TYPE__LIST } from '../constants';
 
-export default function ListPage({ setSelected, selectedIdx }) {
+export default function ListPage({ alcoholIdx, foodIdx, noiseIdx, setSelected, selectedIdx }) {
+  const { datas } = data;
+  const filterIdx = {
+    alcohol: alcoholIdx,
+    food: foodIdx,
+    noise: noiseIdx,
+  };
+
+  const filteredData =
+    alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
+      ? datas.filter(data => data.type === 'restaurant')
+      : datas
+          .filter(data => data.type === 'restaurant')
+          .filter(data => {
+            let flag = false;
+
+            for (const type of FILTER__TYPE__LIST) {
+              const list = filterIdx[type]; // Idx
+              if (list.length === 0) continue;
+
+              if (!data[type]) return false;
+
+              const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
+              if (type === 'noise') {
+                if (filterList.includes(data[type])) flag = true;
+              } else {
+                for (const filter of data[type]) {
+                  if (filterList.includes(filter)) flag = true;
+                }
+              }
+            }
+
+            return flag;
+          });
+
   return (
     <PageStyled>
       <Blank height={getHeightPixel(10)} />
-      {data.datas.map(store => {
+      {filteredData.map(store => {
         if (store.type === TYPE__LIST[selectedIdx]) {
           return (
             <ContainerStyled key={store.id}>
