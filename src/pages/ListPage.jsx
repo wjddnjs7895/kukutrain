@@ -45,7 +45,7 @@ export default function ListPage({ alcoholIdx, foodIdx, noiseIdx, setSelected, s
 
               return flag;
             });
-
+  else filteredData = [];
   return (
     <PageStyled>
       <Blank height={getHeightPixel(10)} />
