@@ -16,8 +16,9 @@ export default function BottomContainer({
   setFoodIdx,
   noiseIdx,
   setNoiseIdx,
+  selectedIdx,
+  setIdx,
 }) {
-  const [selectedIdx, setIdx] = useState(0);
   return (
     <ContainerStyled marginTop={locY < 796 ? (locY > 0 ? locY + 'px' : getHeightPixel(0)) : getHeightPixel(796)}>
       <BottomHeader

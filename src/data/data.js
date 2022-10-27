@@ -1331,6 +1331,69 @@ export const data = {
       },
     },
     {
+      id: 101,
+      name: '안암역 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.586316,
+        lng: 127.029352,
+      },
+    },
+    {
+      id: 102,
+      name: '56st 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.585023,
+        lng: 127.030009,
+      },
+    },
+    {
+      id: 103,
+      name: '드록바 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.585724,
+        lng: 127.029855,
+      },
+    },
+    {
+      id: 104,
+      name: '오징어바다 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.585515,
+        lng: 127.030012,
+      },
+    },
+    {
+      id: 105,
+      name: '애기능학생회관 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.582519,
+        lng: 127.027585,
+      },
+    },
+    {
+      id: 106,
+      name: '문캠학생회관 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.586924,
+        lng: 127.032244,
+      },
+    },
+    {
+      id: 107,
+      name: '중지 화장실',
+      type: 'toilet',
+      position: {
+        lat: 37.588631,
+        lng: 127.0331,
+      },
+    },
+    {
       id: 999,
       name: '응원단 폐막제',
       type: 'cheer',
