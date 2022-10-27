@@ -15,15 +15,15 @@ export const data = {
       snack: [
         {
           name: '치킨',
-          image: null,
+          image: require('../Assets/image/맛닭꼬/chicken.jpeg'),
         },
         {
           name: '깐풍만두',
-          image: null,
+          image: require('../Assets/image/맛닭꼬/gganpungmandu.jpeg'),
         },
         {
           name: '떡볶이',
-          image: null,
+          image: require('../Assets/image/맛닭꼬/tteokbbokki.jpeg'),
         },
       ],
       train: null,
@@ -160,14 +160,14 @@ export const data = {
       group: '의대교우회',
       addr: '서울 성북구 고려대로 92',
       phone: '02-927-1331',
-      img_main: require('../Assets/image/삼성통닭/main.jpeg'),
+      img_main: require('../Assets/image/삼통치킨/main.jpeg'),
       time: '7:00~9:00',
       alcohol: ['맥주'],
       food: ['마른 안주'],
       snack: [
         {
           name: '후라이드치킨',
-          image: require('../Assets/image/삼성통닭/chicken.jpeg'),
+          image: require('../Assets/image/삼통치킨/chicken.jpeg'),
         },
       ],
       train: null,
@@ -192,11 +192,11 @@ export const data = {
       snack: [
         {
           name: '삼겹살',
-          image: null,
+          image: require('../Assets/image/산적/ssamgyupsal.jpeg'),
         },
         {
           name: '돼지갈비',
-          image: null,
+          image: require('../Assets/image/산적/galbi.jpeg'),
         },
       ],
       train: null,
@@ -259,15 +259,15 @@ export const data = {
       snack: [
         {
           name: '빨간맛떡볶이',
-          image: null,
+          image: require('../Assets/image/별난주점/tteokbbokki.jpeg'),
         },
         {
           name: '순살치킨',
-          image: null,
+          image: require('../Assets/image/별난주점/chicken.jpeg'),
         },
         {
           name: '후식파르페',
-          image: null,
+          image: require('../Assets/image/별난주점/parpe.jpeg'),
         },
       ],
       train: null,
@@ -370,19 +370,19 @@ export const data = {
       snack: [
         {
           name: '동그랑땡',
-          image: null,
+          image: require('../Assets/image/삼파전/dongrangddaeng.jpeg'),
         },
         {
           name: '계란말이',
-          image: null,
+          image: require('../Assets/image/삼파전/gyeranmalee.jpeg'),
         },
         {
           name: '소세지',
-          image: null,
+          image: require('../Assets/image/삼파전/sausage.jpeg'),
         },
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/삼파전/odengtang.jpeg'),
         },
       ],
       train: null,
@@ -474,15 +474,15 @@ export const data = {
       snack: [
         {
           name: '파닭',
-          image: null,
+          image: require('../Assets/image/38포차/padak.jpeg'),
         },
         {
           name: '모듬소세지감자튀김',
-          image: null,
+          image: require('../Assets/image/38포차/sausagepotato.jpeg'),
         },
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/38포차/odengtang.jpeg'),
         },
       ],
       train: null,
@@ -896,30 +896,30 @@ export const data = {
       group: '72학번동기회',
       addr: '서울 성북구 고려대로26길 55 2층',
       phone: '0507-1335-1079',
-      img_main: null,
+      img_main: require('../Assets/image/호랑이술상/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '참치김밥',
-          image: null,
+          image: require('../Assets/image/호랑이술상/gimbap.jpeg'),
         },
         {
           name: '돼지목살 김치찌개',
-          image: null,
+          image: require('../Assets/image/호랑이술상/kimchizzigye.jpeg'),
         },
         {
           name: '오징어무침',
-          image: null,
+          image: require('../Assets/image/호랑이술상/ozingmuchim.jpeg'),
         },
         {
           name: '떡볶이',
-          image: null,
+          image: require('../Assets/image/호랑이술상/tteokbbokki.jpeg'),
         },
         {
           name: '순대',
-          image: null,
+          image: require('../Assets/image/호랑이술상/sundae.jpeg'),
         },
       ],
       train: null,
@@ -937,14 +937,14 @@ export const data = {
       group: '79학번동기회',
       addr: '서울 성북구 고려대로24길 37',
       phone: '02-925-0420',
-      img_main: null,
+      img_main: require('../Assets/image/안암아줌마치킨/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주'],
       snack: [
         {
           name: '스페셜치킨',
-          image: null,
+          image: require('../Assets/image/안암아줌마치킨/specialchicken.jpeg'),
         },
       ],
       train: null,
@@ -962,11 +962,28 @@ export const data = {
       group: '85학번동기회',
       addr: '서울 성북구 고려대로26길 7',
       phone: '0507-1354-1118',
-      img_main: null,
+      img_main: require('../Assets/image/고대인의먹거리집/main.jpeg'),
       time: null,
-      alcohol: ['소주', '맥주'],
-      food: null,
-      snack: null,
+      alcohol: ['소주', '막걸리'],
+      food: ['마른 안주', '국물/탕류'],
+      snack: [
+        {
+          name: '미니족발',
+          image: require('../Assets/image/고대인의먹거리집/minijokbal.jpeg'),
+        },
+        {
+          name: '편육',
+          image: require('../Assets/image/고대인의먹거리집/pyeonyuk.jpeg'),
+        },
+        {
+          name: '술국',
+          image: require('../Assets/image/고대인의먹거리집/sulguk.jpeg'),
+        },
+        {
+          name: '귤',
+          image: null,
+        },
+      ],
       train: null,
       noise: '조용해요',
       position: {
@@ -982,18 +999,18 @@ export const data = {
       group: '87학번동기회',
       addr: '서울 성북구 고려대로26길 42-3',
       phone: '02-928-3030',
-      img_main: null,
+      img_main: require('../Assets/image/춘천닭갈비/main.jpeg'),
       time: '7:30~9:30',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '닭갈비',
-          image: null,
+          image: require('../Assets/image/춘천닭갈비/chickengalbi.jpeg'),
         },
         {
           name: '김치찌개',
-          image: null,
+          image: require('../Assets/image/춘천닭갈비/kimchizzigye.jpeg'),
         },
       ],
       train: null,
@@ -1011,22 +1028,22 @@ export const data = {
       group: '공대교우회',
       addr: '서울 성북구 고려대로26길 32 1층',
       phone: 'null',
-      img_main: null,
+      img_main: require('../Assets/image/희야/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주', '막걸리'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '연어샐러드',
-          image: null,
+          image: require('../Assets/image/희야/salmonsalad.jpeg'),
         },
         {
           name: '치킨가라아게',
-          image: null,
+          image: require('../Assets/image/희야/chickengarage.jpeg'),
         },
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/희야/odengtang.jpeg'),
         },
       ],
       train: null,
@@ -1044,18 +1061,18 @@ export const data = {
       group: '생과대교우회',
       addr: '서울 성북구 고려대로26길 55',
       phone: '02-922-1379',
-      img_main: null,
+      img_main: require('../Assets/image/황제곱창/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '막걸리'],
       food: ['마른 안주'],
       snack: [
         {
           name: '야채곱창',
-          image: null,
+          image: require('../Assets/image/황제곱창/yachaegopchang.jpeg'),
         },
         {
           name: '돼지막창',
-          image: null,
+          image: require('../Assets/image/황제곱창/pigmakchang.jpeg'),
         },
       ],
       train: null,
@@ -1067,20 +1084,20 @@ export const data = {
     },
     {
       id: 33,
-      name: '삼성통닭(오거리)',
+      name: '삼성통닭',
       subname: '치킨, 닭강정',
       type: 'restaurant',
       group: '세종연합교우회',
       addr: '서울 성북구 고려대로24길 60',
       phone: '02-922-0077',
-      img_main: null,
+      img_main: require('../Assets/image/삼성통닭/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['맥주'],
       food: ['마른 안주'],
       snack: [
         {
           name: '치킨',
-          image: null,
+          image: require('../Assets/image/삼성통닭/chicken.jpeg'),
         },
       ],
       train: null,
@@ -1098,22 +1115,22 @@ export const data = {
       group: '심리학부교우회',
       addr: '서울 성북구 고려대로24길 28',
       phone: '02-463-2605',
-      img_main: null,
+      img_main: require('../Assets/image/술기로운맥주생활/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주'],
       snack: [
         {
           name: '롱소세지',
-          image: null,
+          image: require('../Assets/image/술기로운맥주생활/longsausage.jpeg'),
         },
         {
           name: '돼지불고기',
-          image: null,
+          image: require('../Assets/image/술기로운맥주생활/pigbulgogi.jpeg'),
         },
         {
           name: '감자튀김',
-          image: null,
+          image: require('../Assets/image/술기로운맥주생활/frenchpotato.jpeg'),
         },
       ],
       train: null,
@@ -1131,26 +1148,26 @@ export const data = {
       group: '사회학과교우회',
       addr: '서울 성북구 고려대로26길 42-2 2층',
       phone: '0507-1350-4872',
-      img_main: null,
+      img_main: require('../Assets/image/지금보고싶다/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주', '막걸리'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/지금보고싶다/zeyuk.jpeg'),
         },
         {
           name: '감자튀김',
-          image: null,
+          image: require('../Assets/image/지금보고싶다/frenchpotato.jpeg'),
         },
         {
           name: '오뎅탕',
-          image: null,
+          image: require('../Assets/image/지금보고싶다/odengtang.jpeg'),
         },
         {
           name: '떡볶이',
-          image: null,
+          image: require('../Assets/image/지금보고싶다/tteokbbokki.jpeg'),
         },
       ],
       train: null,
@@ -1168,14 +1185,14 @@ export const data = {
       group: '신소재공학부교우회',
       addr: '서울 성북구 고려대로24가길 12',
       phone: '02-953-6022',
-      img_main: null,
+      img_main: require('../Assets/image/돼야지/main.jpeg'),
       time: '7:00~9:30',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주'],
       snack: [
         {
           name: '삼겹살',
-          image: null,
+          image: require('../Assets/image/돼야지/samgyup.jpeg'),
         },
       ],
       train: null,
@@ -1193,22 +1210,22 @@ export const data = {
       group: 'ROTC교우회',
       addr: '서울 성북구 고려대로24길 11 지하1층',
       phone: null,
-      img_main: null,
+      img_main: require('../Assets/image/안암주점/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '유린기',
-          image: null,
+          image: require('../Assets/image/안암주점/yuringi.jpeg'),
         },
         {
           name: '순두부찌개',
-          image: null,
+          image: require('../Assets/image/안암주점/sundubu.jpeg'),
         },
         {
           name: '후식파르페',
-          image: null,
+          image: require('../Assets/image/안암주점/parpe.jpeg'),
         },
       ],
       train: null,
@@ -1226,22 +1243,22 @@ export const data = {
       group: '공인회계사교우회',
       addr: '서울 성북구 고려대로26길 14 대륜빌딩 2층 201호',
       phone: '02-928-0260',
-      img_main: null,
+      img_main: require('../Assets/image/두꺼비로맨스/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주', '막걸리'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '오돌뼈',
-          image: null,
+          image: require('../Assets/image/두꺼비로맨스/odolbone.jpeg'),
         },
         {
           name: '칠리새우',
-          image: null,
+          image: require('../Assets/image/두꺼비로맨스/chillishrimp.jpeg'),
         },
         {
           name: '김치찌개',
-          image: null,
+          image: require('../Assets/image/두꺼비로맨스/kimchizzigye.jpeg'),
         },
       ],
       train: null,
@@ -1259,18 +1276,18 @@ export const data = {
       group: '일본교우회',
       addr: '서울 성북구 고려대로26길 42-3',
       phone: '02-6083-9865',
-      img_main: null,
+      img_main: require('../Assets/image/배떼기곱창/main.jpeg'),
       time: '7:00~10:00',
       alcohol: ['소주', '맥주'],
       food: ['마른 안주', '국물/탕류'],
       snack: [
         {
           name: '제육볶음',
-          image: null,
+          image: require('../Assets/image/배떼기곱창/zeyuk.jpeg'),
         },
         {
           name: '선지소고기 해장국',
-          image: null,
+          image: require('../Assets/image/배떼기곱창/sunjihaejang.jpeg'),
         },
       ],
       train: null,
@@ -1288,11 +1305,24 @@ export const data = {
       group: '로보티즈',
       addr: '서울 성북구 고려대로24길 58-5 고려안암빌딩 지하1층',
       phone: '0507-1416-5358',
-      img_main: null,
+      img_main: require('../Assets/image/막걸리찬가/main.jpeg'),
       time: '6:00~9:00',
       alcohol: ['소주', '맥주', '막걸리'],
-      food: null,
-      snack: null,
+      food: ['마른 안주', '국물/탕류', '전류'],
+      snack: [
+        {
+          name: '꼬치어묵탕',
+          image: require('../Assets/image/막걸리찬가/odengtang.jpeg'),
+        },
+        {
+          name: '김치전',
+          image: require('../Assets/image/막걸리찬가/kimchijun.jpeg'),
+        },
+        {
+          name: '감자튀김',
+          image: require('../Assets/image/막걸리찬가/frenchpotato.jpeg'),
+        },
+      ],
       train: null,
       noise: '활기차요',
       position: {
@@ -1302,10 +1332,10 @@ export const data = {
     },
     {
       id: 999,
-      name: '응원단',
+      name: '응원단 폐막제',
       type: 'cheer',
       group: '응원단',
-      img_main: null,
+      img_main: require('../Assets/image/응원단/Cheerup.jpeg'),
       addr: null,
       phone: null,
       time: '7:00~8:00',
