@@ -78,7 +78,7 @@ export function BottomHeader({
             }
           }}
         >
-          <BackHeader setSelected={setSelected} />
+          <BackHeader selected={selected} setSelected={setSelected} />
         </div>
       ) : selectedIdx === 1 ? (
         <div>

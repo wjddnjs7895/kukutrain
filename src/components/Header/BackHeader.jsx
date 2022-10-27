@@ -4,13 +4,13 @@ import { getWidthPixel, getHeightPixel } from '../../utils/responsive';
 
 import { ReactComponent as BackIcon } from '../../Assets/icon/back.svg';
 
-export default function BackHeader({ setSelected }) {
+export default function BackHeader({ selected, setSelected }) {
   return (
     <ContainerStyled>
       <ButtonStyled onClick={() => setSelected(-1)}>
         <IconStyled />
       </ButtonStyled>
-      <div className="info-text">식당 정보</div>
+      <div className="info-text">{selected === 999 ? '응원단' : '식당 정보'}</div>
     </ContainerStyled>
   );
 }

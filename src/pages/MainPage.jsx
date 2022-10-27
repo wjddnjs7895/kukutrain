@@ -6,6 +6,7 @@ import { getHeightPixel, getPixelToNumber, getWidthPixel } from '../utils/respon
 import { HEIGHT } from '../utils/responsive';
 import { deviceModel } from '../utils';
 import { ReactComponent as Ellipse } from '../Assets/icon/Ellipse.svg';
+import { ReactComponent as Close } from '../Assets/icon/Close.svg';
 
 function MainPage() {
   const [selected, setSelected] = useState(-1);
@@ -22,7 +23,10 @@ function MainPage() {
   const [foodIdx, setFoodIdx] = useState([]);
   const [noiseIdx, setNoiseIdx] = useState([]);
 
-  const SIZE = getWidthPixel(7);
+  const SIZE = getWidthPixel(8);
+  const CLOSE_SIZE = getWidthPixel(10);
+
+  const [banner, setBanner] = useState(true);
 
   return (
     <PageStyled>
@@ -33,13 +37,21 @@ function MainPage() {
         foodIdx={foodIdx}
         noiseIdx={noiseIdx}
       />
-      <BannerStyled href="https://forms.gle/8ms8F85UdewC9N8A9" target="_blank">
-        <div className="content">
-          <Ellipse width={SIZE} height={SIZE} />
-          <div className="text">KUGODS 디자인 인력 모집중</div>
-          <Ellipse width={SIZE} height={SIZE} />
-        </div>
-      </BannerStyled>
+      {banner && (
+        <>
+          <BannerStyled>
+            <a className="content" href="https://forms.gle/8ms8F85UdewC9N8A9" target="_blank" rel="noreferrer">
+              <Ellipse width={SIZE} height={SIZE} />
+              <div className="text">KUGODS 디자인 팀 모집중</div>
+              <Ellipse width={SIZE} height={SIZE} />
+            </a>
+            <div className="close" onClick={() => setBanner(false)}>
+              <Close width={CLOSE_SIZE} height={CLOSE_SIZE} />
+            </div>
+          </BannerStyled>
+        </>
+      )}
+
       <BottomContainer
         locY={locY}
         setLocY={setLocY}
@@ -57,11 +69,12 @@ function MainPage() {
 }
 
 const BannerStyled = styled.a`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: ${getHeightPixel(68)};
+  top: ${getHeightPixel(50)};
   left: ${getWidthPixel(30)};
   width: ${getWidthPixel(368)};
   height: ${getHeightPixel(54)};
@@ -78,11 +91,19 @@ const BannerStyled = styled.a`
 
   .text {
     margin: 0 ${getWidthPixel(10)};
-    width: ${getWidthPixel(190)};
     text-align: center;
     font-weight: 600;
     font-size: ${getWidthPixel(14)};
     color: #bc323b;
+  }
+
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: ${getWidthPixel(35)};
   }
 `;
 
