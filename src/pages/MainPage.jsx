@@ -42,7 +42,7 @@ function MainPage() {
           <BannerStyled>
             <a className="content" href="https://forms.gle/8ms8F85UdewC9N8A9" target="_blank" rel="noreferrer">
               <Ellipse width={SIZE} height={SIZE} />
-              <div className="text">KUGODS 디자인 인력 모집중</div>
+              <div className="text">KUGODS 디자인 팀 모집중</div>
               <Ellipse width={SIZE} height={SIZE} />
             </a>
             <div className="close" onClick={() => setBanner(false)}>
