@@ -35,7 +35,15 @@ export default function BottomContainer({
         noiseIdx={noiseIdx}
         setNoiseIdx={setNoiseIdx}
       />
-      <BodyContainer locY={locY} selected={selected} setSelected={setSelected} selectedIdx={selectedIdx} />
+      <BodyContainer
+        locY={locY}
+        alcoholIdx={alcoholIdx}
+        foodIdx={foodIdx}
+        noiseIdx={noiseIdx}
+        selected={selected}
+        setSelected={setSelected}
+        selectedIdx={selectedIdx}
+      />
     </ContainerStyled>
   );
 }
