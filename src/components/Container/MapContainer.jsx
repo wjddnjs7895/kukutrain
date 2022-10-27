@@ -12,15 +12,47 @@ import { FILTER__LIST, FILTER__TYPE__LIST } from '../../constants';
 const CENTER = { lat: 37.5843918209331, lng: 127.02957798348103 };
 const SIZE = 27;
 
-export default function MapContainer({ selected, setSelected, alcoholIdx, foodIdx, noiseIdx }) {
+export default function MapContainer({ selected, setSelected, alcoholIdx, foodIdx, noiseIdx, selectedIdx }) {
   const { datas } = data;
 
-  const filterIdx = {
-    alcohol: alcoholIdx,
-    food: foodIdx,
-    noise: noiseIdx,
-  };
+  let filteredData = null;
+  if (selectedIdx === 0) filteredData = datas.filter(data => data.type === 'toilet');
+  if (selectedIdx === 1) {
+    const filterIdx = {
+      alcohol: alcoholIdx,
+      food: foodIdx,
+      noise: noiseIdx,
+    };
 
+    filteredData =
+      alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
+        ? datas.filter(data => data.type === 'restaurant')
+        : datas.filter(data => {
+            if (data.type !== 'restaurant') return false;
+            let flag = false;
+
+            for (const type of FILTER__TYPE__LIST) {
+              const list = filterIdx[type]; // Idx
+              if (list.length === 0) continue;
+
+              if (!data[type]) return false;
+
+              const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
+              if (type === 'noise') {
+                if (filterList.includes(data[type])) flag = true;
+              } else {
+                for (const filter of data[type]) {
+                  if (filterList.includes(filter)) flag = true;
+                }
+              }
+            }
+
+            return flag;
+          });
+  }
+  if (selectedIdx === 2) filteredData = datas.filter(data => data.type === 'cheer');
+
+  /*
   let filtered_datas =
     alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
       ? datas
@@ -45,13 +77,14 @@ export default function MapContainer({ selected, setSelected, alcoholIdx, foodId
 
           return flag;
         });
+        */
 
   const selectedData = selected === -1 ? null : datas.find(data => data.id === selected);
   const centerPos = selectedData ? selectedData.position : CENTER;
 
   return (
     <StyledMap center={centerPos} isPanto={true}>
-      {filtered_datas.map(data => {
+      {filteredData.map(data => {
         const { id, position, type } = data;
 
         if (type === 'restaurant') {

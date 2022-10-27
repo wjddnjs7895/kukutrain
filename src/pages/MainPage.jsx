@@ -25,7 +25,7 @@ function MainPage() {
 
   const SIZE = getWidthPixel(8);
   const CLOSE_SIZE = getWidthPixel(10);
-
+  const [selectedIdx, setIdx] = useState(0);
   const [banner, setBanner] = useState(true);
 
   return (
@@ -36,6 +36,7 @@ function MainPage() {
         alcoholIdx={alcoholIdx}
         foodIdx={foodIdx}
         noiseIdx={noiseIdx}
+        selectedIdx={selectedIdx}
       />
       {banner && (
         <>
@@ -63,6 +64,8 @@ function MainPage() {
         setFoodIdx={setFoodIdx}
         noiseIdx={noiseIdx}
         setNoiseIdx={setNoiseIdx}
+        selectedIdx={selectedIdx}
+        setIdx={setIdx}
       />
     </PageStyled>
   );
