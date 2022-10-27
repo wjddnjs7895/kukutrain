@@ -15,32 +15,36 @@ export default function ListPage({ alcoholIdx, foodIdx, noiseIdx, setSelected, s
     noise: noiseIdx,
   };
 
-  const filteredData =
-    alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
-      ? datas.filter(data => data.type === 'restaurant')
-      : datas
-          .filter(data => data.type === 'restaurant')
-          .filter(data => {
-            let flag = false;
+  let filteredData = null;
 
-            for (const type of FILTER__TYPE__LIST) {
-              const list = filterIdx[type]; // Idx
-              if (list.length === 0) continue;
+  if (selectedIdx === 2) filteredData = datas.filter(data => data.id === 999);
+  else if (selectedIdx === 1)
+    filteredData =
+      alcoholIdx.length === 0 && foodIdx.length === 0 && noiseIdx.length === 0
+        ? datas.filter(data => data.type === 'restaurant')
+        : datas
+            .filter(data => data.type === 'restaurant')
+            .filter(data => {
+              let flag = false;
 
-              if (!data[type]) return false;
+              for (const type of FILTER__TYPE__LIST) {
+                const list = filterIdx[type]; // Idx
+                if (list.length === 0) continue;
 
-              const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
-              if (type === 'noise') {
-                if (filterList.includes(data[type])) flag = true;
-              } else {
-                for (const filter of data[type]) {
-                  if (filterList.includes(filter)) flag = true;
+                if (!data[type]) return false;
+
+                const filterList = list.map(idx => FILTER__LIST[type].list[idx]);
+                if (type === 'noise') {
+                  if (filterList.includes(data[type])) flag = true;
+                } else {
+                  for (const filter of data[type]) {
+                    if (filterList.includes(filter)) flag = true;
+                  }
                 }
               }
-            }
 
-            return flag;
-          });
+              return flag;
+            });
 
   return (
     <PageStyled>
