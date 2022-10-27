@@ -154,7 +154,7 @@ export const data = {
     },
     {
       id: 5,
-      name: '삼성통닭',
+      name: '삼통치킨',
       subname: '치킨, 닭강정',
       type: 'restaurant',
       group: '의대교우회',
@@ -1008,7 +1008,7 @@ export const data = {
       name: '희야',
       subname: '이자카야',
       type: 'restaurant',
-      group: '공대교유회',
+      group: '공대교우회',
       addr: '서울 성북구 고려대로26길 32 1층',
       phone: 'null',
       img_main: null,
