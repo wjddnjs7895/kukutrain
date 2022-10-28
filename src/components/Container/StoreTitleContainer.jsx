@@ -57,7 +57,7 @@ const ImageStyled = styled.img`
 
 const TitleStyled = styled.div`
   font-weight: bold;
-  font-color: '#9a9a9a';
+  color: '#424242';
   font-size: ${getWidthPixel(18)};
   padding-left: ${getWidthPixel(8)};
   display: flex;
@@ -67,6 +67,7 @@ const TitleStyled = styled.div`
 const SubTitleStyled = styled.div`
   font-weight: regular;
   font-size: ${getWidthPixel(13)};
+  color: #9a9a9a;
   display: flex;
   align-items: center;
 `;

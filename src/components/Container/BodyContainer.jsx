@@ -31,10 +31,10 @@ export default function BodyContainer({ locY, alcoholIdx, foodIdx, noiseIdx, sel
 const ContainerStyled = styled.div`
   width: 100%;
   height: ${getHeightPixel(926)};
-  background-color: ${palette.background};
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fafafa;
 `;
 
 const DividerStyled = styled.div`

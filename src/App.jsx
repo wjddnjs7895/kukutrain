@@ -4,6 +4,7 @@ import { isMobile } from 'react-device-detect';
 import { getHeightPixel, getWidthPixel, HEIGHT, REAL__WIDTH, WIDTH } from './utils/responsive';
 import MainPage from './pages/MainPage';
 import RouteChangeTracker from './components/RouteChangeTracker';
+import LeftPage from './pages/LeftPage';
 import Blank from './components/Blank';
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
   } else
     return (
       <PageStyled>
-        <Blank width={getWidthPixel(405)} height={getHeightPixel(720)} />
+        <LeftPage />
+        <Blank width={getWidthPixel(100)} />
         <ContainerStyled>
           <MainPage />
         </ContainerStyled>
@@ -36,6 +38,7 @@ function App() {
 
 const PageStyled = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
 `;
 
