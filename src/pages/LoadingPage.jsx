@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import { ReactComponent as ElementImage } from '../Assets/element/LeftScreenElement.svg';
 import { ReactComponent as TrainIcon } from '../Assets/icon/train_right.svg';
-import { getHeightPixel, getWidthPixel } from '../utils/responsive';
+import { getHeightPixel, getPixelToNumber, getWidthPixel } from '../utils/responsive';
 
 export default function LoadingPage() {
   return (
@@ -50,13 +50,13 @@ const LoadingBar = styled.div`
   width: ${getWidthPixel(428)};
   background-color: #bc323b;
   position: abosulte;
-  margin-top: ${getHeightPixel(100)};
+  margin-top: 100px;
 `;
 
 const TrainStyled = styled(TrainIcon)`
   width: ${getWidthPixel(111)};
   height: ${getWidthPixel(62)};
-  margin-top: ${getHeightPixel(100 - 62)};
+  margin-top: ${100 - getPixelToNumber(getWidthPixel(62))}px;
   animation: ${moveRight} 3s linear;
   position: absolute;
   margin-left: ${getWidthPixel(428 + 120)};
