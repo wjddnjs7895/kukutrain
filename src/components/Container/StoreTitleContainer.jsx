@@ -52,7 +52,7 @@ const InnerContainerStyled = styled.div`
 const ImageStyled = styled.img`
   width: ${getWidthPixel(129)};
   height: ${getHeightPixel(84)};
-  border-radius: ${getWidthPixel(5)};
+  border: 1px solid #e3e3e3;
 `;
 
 const TitleStyled = styled.div`
@@ -72,8 +72,8 @@ const SubTitleStyled = styled.div`
 `;
 
 const TimeIconStyled = styled(TimeIcon)`
-  width: ${getWidthPixel(16)};
-  height: ${getWidthPixel(16)};
+  width: ${getWidthPixel(14)};
+  height: ${getWidthPixel(14)};
 `;
 
 const TimeContainerStyled = styled.div`
@@ -89,7 +89,7 @@ const TimeContainerStyled = styled.div`
 
 const TimeIconTextStyled = styled.div`
   color: white;
-  font-size: ${getWidthPixel(11.5)};
+  font-size: ${getWidthPixel(10)};
 `;
 
 const TimeTextStyled = styled.div`
