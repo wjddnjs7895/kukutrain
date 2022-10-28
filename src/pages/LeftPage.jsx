@@ -9,7 +9,7 @@ export default function LeftPage() {
   return (
     <PageStyled>
       <ContainerStyled>
-        <ElementImage />
+        <ElementStyled />
       </ContainerStyled>
     </PageStyled>
   );
